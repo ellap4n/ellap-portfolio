@@ -14,7 +14,7 @@ function Header() {
       </nav>
       {/* Logo and Website Name */}
       <img src={logo} alt="Ella's Logo" className={styles.logoImg} />
-      <p>ella's portfolio</p>
+      <p>✧  ella's portfolio</p>
     </header>
   )
 }

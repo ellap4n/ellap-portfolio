@@ -1,17 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css';
 import Header from './Header.jsx';
+import AboutMe from './aboutme.jsx';
 
 function App() {
 
   return (
     <>
       <Header /> {/* Website Header! */}
+      <AboutMe /> {/* About Me Section */}
       <body>
-        <h1>Welcome to my portfolio!</h1>
-        <p>This is where I will showcase my projects and skills.</p>
+        <p> information here </p>
       </body>
     </>
   )
