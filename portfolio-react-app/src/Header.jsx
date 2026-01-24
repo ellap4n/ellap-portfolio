@@ -12,6 +12,7 @@ function Header() {
       <nav>
         <Link to="/">home</Link>
         <Link to="/projects">projects</Link>
+        <Link to="/gallery">gallery</Link>
       </nav>
       {/* Logo and Website Name */}
       <img src={logo} alt="Ella's Logo" className={styles.logoImg} />
