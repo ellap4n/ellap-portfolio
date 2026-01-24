@@ -14,8 +14,8 @@ header {
 
     font-size: calc(2vh + 8px);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6e3dc;
-    color: #871717;
+    background-color: #f7f9fa;
+    color: #0049a2;
 }
 
 nav {
@@ -44,7 +44,7 @@ nav {
     height: 95vh;
     width: 100vw;
 
-    background-image: url('./assets/bckd.jpg');
+    background-image: url('./assets/abtme.jpg');
     background-size: cover;
     background-position: center;
     text-align: right;
@@ -66,6 +66,7 @@ nav {
 
 .skillsSection {
     position: relative;
+    background-color: rgb(176, 182, 188);
     container-type: inline-size;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -4,27 +4,27 @@ import styles from './Header.module.css';
 import Card from './components/card';
 
 function SkillsSection() {
-    {/* Skills Cards Section */ }
+    //* Skills Cards Section *//
     return (
         <div className={styles.skillsSection}>
             <Card
-                title="Skill 1"
-                description="Description of Skill 1"
+                title="Technical"
+                description={<p>Welding <br /> 3D Printing <br />  Machining <br />  Soldering <br /> Laser Cutting <br /> Turning/Milling <br /> Woodwork & Ceramics</p>}
                 variant="skillCard"
             />
             <Card
-                title="Skill 2"
-                description="Description of Skill 2"
+                title="Programming"
+                description={<p>C/C++ <br /> Matlab <br /> Rstudio <br /> Javascript <br /> CSS/Html </p>}
                 variant="skillCard"
             />
             <Card
-                title="Skill 3"
-                description="Description of Skill 3"
+                title="Softwares"
+                description={<p>Revit <br />  Autodesk Inventor <br />  Adobe Creative Suite <br />  Blender <br /> Excel <br /> LaTex</p>}
                 variant="skillCard"
             />
             <Card
-                title="Skill 4"
-                description="Description of Skill 4"
+                title="Developer Tools/Frameworks"
+                description={<p>Github <br /> Visual Studio Code <br /> Vite <br /> React </p>}
                 variant="skillCard"
             />
         </div >
