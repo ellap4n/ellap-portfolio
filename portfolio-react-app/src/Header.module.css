@@ -32,6 +32,17 @@ nav {
     object-fit: cover;
 }
 
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/abtme.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 2vh;
+}
+
 .aboutMe {
     box-sizing: border-box;
     display: flex;
@@ -43,10 +54,6 @@ nav {
     max-width: 100%;
     height: 95vh;
     width: 100vw;
-
-    background-image: url('./assets/abtme.jpg');
-    background-size: cover;
-    background-position: center;
     text-align: right;
     line-height: 1.2rem;
     color: #ffffff;
@@ -64,12 +71,30 @@ nav {
     text-align: right;
 }
 
+.downArrowImg {
+    width: calc(10px + 2vh);
+    opacity: 0.8;
+    margin-top: 2vh;
+    animation: bounce 2s infinite;
+}
+
 .skillsSection {
+    width: 90vw;
     position: relative;
     background-color: rgb(176, 182, 188);
-    container-type: inline-size;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 5vh 5vw;
+    align-self: center;
+}
+
+.carouselContainer {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 20px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
