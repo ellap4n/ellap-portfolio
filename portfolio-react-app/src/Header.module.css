@@ -63,3 +63,7 @@ nav {
     font-size: calc(1.5vh + 8px);
     text-align: right;
 }
+
+.skillsSection {
+    flex-direction: column;
+}
