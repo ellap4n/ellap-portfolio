@@ -6,6 +6,7 @@ import Card from './components/card';
 function SkillsSection() {
     //* Skills Cards Section *//
     return (
+
         <div className={styles.skillsSection}>
             <Card
                 title="Technical"
@@ -28,6 +29,7 @@ function SkillsSection() {
                 variant="skillCard"
             />
         </div >
+
     )
 }
 

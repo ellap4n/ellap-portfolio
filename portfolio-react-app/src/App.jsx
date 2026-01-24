@@ -1,21 +1,23 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Header.jsx';
-import AboutMe from './aboutme.jsx';
-import SkillsSection from './skills.jsx';
+import HomePage from './HomePage.jsx';
+import ProjectsPage from './pages/ProjectPage.jsx';
 
 function App() {
-
   return (
-    <>
+    <BrowserRouter>
       <Header /> {/* Website Header! */}
-      <AboutMe /> {/* About Me Section */}
-      <SkillsSection /> {/* Skills Section */}
-      <body>
-        <p> information here </p>
-      </body>
-    </>
-  )
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Routes>
+      </main>
+    </BrowserRouter >
+  );
 }
+
 
 export default App
