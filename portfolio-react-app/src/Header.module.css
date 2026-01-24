@@ -54,9 +54,9 @@ nav {
 
 .aboutMeText {
     box-sizing: border-box;
-    position: absolute;
-    bottom: 7vh;
-    right: 5vw;
+    position: relative;
+    margin-top: 15vh;
+    margin-right: 5vw;
     width: 40vw;
     max-width: 45vw;
     padding: 1vh 2vw;
@@ -65,5 +65,10 @@ nav {
 }
 
 .skillsSection {
-    flex-direction: column;
+    position: relative;
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 5vh 5vw;
 }
