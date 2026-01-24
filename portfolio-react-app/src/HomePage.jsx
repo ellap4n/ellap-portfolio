@@ -4,6 +4,7 @@ import Header from './Header.jsx';
 import AboutMe from './aboutme.jsx';
 import SkillsSection from './skills.jsx';
 import ProjectCarousel from './projectcarousel.jsx';
+import ContactMe from './components/contactme.jsx';
 
 function HomePage() {
 
@@ -13,6 +14,7 @@ function HomePage() {
             <SkillsSection /> {/* Skills Section */}
             <h2>Projects</h2>
             <ProjectCarousel /> {/* Project Carousel Section */}
+            <ContactMe /> {/* Contact Me Section */}
         </>
     )
 }
