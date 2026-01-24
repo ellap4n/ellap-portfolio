@@ -14,8 +14,8 @@ header {
 
     font-size: calc(2vh + 8px);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6e3dc;
-    color: #871717;
+    background-color: #f7f9fa;
+    color: #0049a2;
 }
 
 nav {
@@ -44,7 +44,7 @@ nav {
     height: 95vh;
     width: 100vw;
 
-    background-image: url('./assets/bckd.jpg');
+    background-image: url('./assets/abtme.jpg');
     background-size: cover;
     background-position: center;
     text-align: right;
@@ -54,9 +54,9 @@ nav {
 
 .aboutMeText {
     box-sizing: border-box;
-    position: absolute;
-    bottom: 7vh;
-    right: 5vw;
+    position: relative;
+    margin-top: 15vh;
+    margin-right: 5vw;
     width: 40vw;
     max-width: 45vw;
     padding: 1vh 2vw;
@@ -65,5 +65,11 @@ nav {
 }
 
 .skillsSection {
-    flex-direction: column;
+    position: relative;
+    background-color: rgb(176, 182, 188);
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 5vh 5vw;
 }

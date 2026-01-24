@@ -1,0 +1,35 @@
+.cardStyle {
+    border-radius: 10px;
+}
+
+.default {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.skillCard {
+    border-radius: 15%;
+    width: 75%;
+    height: 85%;
+    padding: 10%;
+    align-items: left;
+    text-align: left;
+    background-color: rgb(237, 236, 229);
+}
+
+.personalCard {
+    background-color: lightblue;
+}
+
+.uniCard {
+    background-color: lightgreen;
+}
+
+.workCard {
+    background-color: lightcoral;
+}
+
+.artCard {
+    background-color: lightgoldenrodyellow;
+}
