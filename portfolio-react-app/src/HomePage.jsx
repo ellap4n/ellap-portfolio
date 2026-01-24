@@ -9,7 +9,6 @@ function HomePage() {
 
     return (
         <>
-            <Header /> {/* Website Header! */}
             <AboutMe /> {/* About Me Section */}
             <SkillsSection /> {/* Skills Section */}
             <h2>Projects</h2>
