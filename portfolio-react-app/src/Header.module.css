@@ -24,6 +24,23 @@ nav {
     font-size: calc(1.8vh + 8px);
 }
 
+footer {
+    bottom: 0;
+    width: 100vw;
+    padding: 1vh 1vw;
+    z-index: 10;
+    display: grid;
+    position: static;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    font-size: calc(1.5vh + 8px);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fa;
+    color: #0049a2;
+}
+
 .logoImg {
     border-radius: 50%;
     width: calc(120px + 4vh);
@@ -99,4 +116,40 @@ nav {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     min-height: 100px;
+}
+
+/* Footer Styling */
+
+.footerPageLinks {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 20%;
+    text-align: left;
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: #0049a2;
+    font-size: calc(1.2vh + 8px);
+}
+
+.footerSocialsIcon {
+    width: calc(15px + 1.5vh);
+    height: calc(15px + 1.5vh);
+}
+
+.footerThirdColumn {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: calc(1.2vh + 8px);
+    text-align: right;
+    margin-right: 20%;
+}
+
+.logoImgFooter {
+    border-radius: 50%;
+    width: calc(120px + 4vh);
+    height: calc(120px + 4vh);
+    padding: 2vh 20vw;
+    object-fit: cover;
 }

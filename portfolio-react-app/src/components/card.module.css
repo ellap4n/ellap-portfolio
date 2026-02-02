@@ -35,15 +35,27 @@
 }
 
 .personalCard {
-    background-color: lightblue;
+    width: 100%;
+    padding: calc(1vh + 10px) 0;
+    border-radius: 30px;
+    opacity: 0.8;
+    background-color: rgb(219, 230, 234);
 }
 
 .uniCard {
-    background-color: lightgreen;
+    width: 100%;
+    padding: calc(1vh + 10px) 0;
+    border-radius: 30px;
+    opacity: 0.8;
+    background-color: rgb(219, 225, 209);
 }
 
 .workCard {
-    background-color: lightcoral;
+    width: 100%;
+    padding: calc(1vh + 10px) 0;
+    border-radius: 30px;
+    opacity: 0.8;
+    background-color: rgb(211, 186, 186);
 }
 
 .artCard {

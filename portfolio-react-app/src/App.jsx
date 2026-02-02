@@ -5,6 +5,7 @@ import Header from './Header.jsx';
 import HomePage from './HomePage.jsx';
 import ProjectsPage from './pages/ProjectPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </main>
+      <Footer /> {/* Website Footer! */}
     </BrowserRouter >
   );
 }

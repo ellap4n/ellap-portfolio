@@ -7,7 +7,7 @@ function SkillsSection() {
     //* Skills Cards Section *//
     return (
 
-        <div className={styles.skillsSection}>
+        <section id="skillsSection" className={styles.skillsSection}>
             <Card
                 title="Technical"
                 description={<p>Welding <br /> 3D Printing <br />  Machining <br />  Soldering <br /> Laser Cutting <br /> Turning/Milling <br /> Woodwork & Ceramics</p>}
@@ -28,7 +28,7 @@ function SkillsSection() {
                 description={<p>Github <br /> Visual Studio Code <br /> Vite <br /> React </p>}
                 variant="skillCard"
             />
-        </div >
+        </section>
 
     )
 }

@@ -5,6 +5,18 @@ import downArrow from './assets/down.png';
 
 function AboutMe() {
     {/* About Me Section */ }
+
+    const handleScrollToSkills = (e) => {
+        e.preventDefault();
+        const skillsSection = document.getElementById('skillsSection');
+        const navbarHeight = 80; // Adjust this value based on your navbar height
+        const offsetPosition = skillsSection.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className={styles.aboutMeContainer}>
             <div className={styles.aboutMe}>
@@ -14,7 +26,9 @@ function AboutMe() {
                     </p>
                 </div>
             </div>
-            <img src={downArrow} alt="Down Arrow" className={styles.downArrowImg} />
+            <a href="#skillsSection" onClick={handleScrollToSkills}>
+                <img src={downArrow} alt="Down Arrow" className={styles.downArrowImg} />
+            </a>
         </div>
     )
 }
