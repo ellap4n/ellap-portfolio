@@ -12,7 +12,6 @@ function HomePage() {
         <>
             <AboutMe /> {/* About Me Section */}
             <SkillsSection /> {/* Skills Section */}
-            <h2>Projects</h2>
             <ProjectCarousel /> {/* Project Carousel Section */}
             <ContactMe /> {/* Contact Me Section */}
         </>

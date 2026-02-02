@@ -2,20 +2,14 @@ import React from 'react'
 import './Header.module.css';
 import styles from './Header.module.css';
 import Card from './components/card';
-import backgroundImg from './assets/bckd2.jpg';
+import backgroundImg from './assets/bike.jpg';
 
 
 function ProjectCarousel() {
     //* Project Preview Cards Section *//
     return (
-        <div style={{
-            backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            padding: '40px 0',
-            minHeight: '200px'
-        }}>
+        <div className={styles.projectPreviewSection}>
+            <h2 style={{ color: '#ffffff' }}>Projects</h2>
             <div className={styles.carouselContainer}>
                 <Card
                     title="Mini Warman Project"
