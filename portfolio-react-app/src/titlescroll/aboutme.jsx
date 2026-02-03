@@ -21,7 +21,7 @@ function AboutMe() {
         <div className={styles.aboutMeContainer}>
             <div className={styles.aboutMe}>
                 <div className={styles.aboutMeText}>
-                    <h1>Welcome to my portfolio!</h1>
+                    <h1>A little about me</h1>
                     <p>Currently in my 2nd year studying a conjoint in Mechatronics Engineering and Fine Arts at UoA, my interests has always been in the intersection of the creative arts, and the technical world of physics and maths. I believe art and engineering coexist to not only solve problems but also empower and inspire users. Areas I find myself most drawn to in this is wearable medical devices like prosthetics. I am also interested in the fluid dynamics space, and its application in medical technology and sustainable energy. Engineering is to me, another means of reaching out a hand to our local and global communities, and helping people in need through innovation and design.
                     </p>
                 </div>
@@ -30,7 +30,7 @@ function AboutMe() {
                 <img src={downArrow} alt="Down Arrow" className={styles.downArrowImg} />
             </a>
             <p className={styles.imageDescriptionText}>
-                Image taken in Otaku, Sapporo (札幌市, 北海道), Jan 2025. Mju Olympus I, Kodak Gold 400. </p>
+                Image taken in Otaku, Hokkaido (小樽市, 北海道), Dec 2024. Mju Olympus I, FujiFilm 200. </p>
         </div>
     )
 }
