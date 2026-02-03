@@ -16,12 +16,13 @@
 
 a {
   font-weight: 500;
-  color: #0049a2;
+  color: #ffffff;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #ae2121;
+  color: #ffffff;
+  text-decoration: shadow;
 }
 
 
@@ -74,8 +75,8 @@ button:focus-visible {
   }
 
   a:hover {
-    color: #ae2121;
-    text-decoration: underline;
+    color: #e3e8eb;
+    text-shadow: 0 0 10px rgba(174, 209, 231, 0.9);
   }
 
   button {
