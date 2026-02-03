@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './scrollreveal.module.css';
 import AboutMe from './aboutme';
+import altero from '../assets/fonts/Altero-Regular.otf';
+import dirtystains from '../assets/fonts/DirtyStains.otf';
+import nineties from '../assets/fonts/NinetiesDisplay.otf';
+import chunkbold from '../assets/fonts/Chunk-Bold.otf';
+import monext from '../assets/fonts/MonumentExtended-Regular.otf';
+import monextbold from '../assets/fonts/MonumentExtended-Ultrabold.otf';
+import minihanzhen from '../assets/fonts/mini-hanzhen-simplified.ttf';
+
 
 /* ─────────────────────────────────────────────
    BLOB CONFIGS
@@ -10,7 +18,7 @@ import AboutMe from './aboutme';
    offsetX/Y   – static offset from cursor so blobs fan out
    ───────────────────────────────────────────── */
 const BLOB_CONFIGS = [
-    { size: 200, lag: 0.04, morphSpeed: 3, offsetX: 10, offsetY: 2 },
+    { size: 250, lag: 0.05, morphSpeed: 3, offsetX: 10, offsetY: 2 },
 ];
 
 /* 8 random values used for the two-value border-radius shorthand */
@@ -114,6 +122,20 @@ function ScrollReveal() {
 
     return (
         <div>
+            <style>{`
+                @font-face {
+                    font-family: 'Chunk Bold';
+                    src: url(${chunkbold}) format('opentype');
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                @font-face {
+                    font-family: 'Mini Hanzhen';
+                    src: url(${minihanzhen}) format('truetype');
+                    font-weight: normal;
+                    font-style: normal;
+                }
+            `}</style>
 
             {/* scroll driver */}
             <div ref={containerRef} style={{ height: '200vh' }}>
@@ -123,7 +145,12 @@ function ScrollReveal() {
                     style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}
                 >
                     {/* ── LAYER 1 (back): AboutMe – always visible underneath ── */}
-                    <div>
+                    <div
+                        style={{
+                            transform: `translateY(${(1 - scrollProgress) * 100}px)`,
+                            transition: 'transform 0.1s linear',
+                        }}
+                    >
                         <AboutMe />
                     </div>
 
@@ -136,14 +163,14 @@ function ScrollReveal() {
                         }}
                     >
                         <div className={styles.titleTextContainer}>
-                            <h1 style={{ fontSize: '128px', margin: 0 }}>ELLA PAN</h1>
-                            <p style={{ fontSize: '20px', opacity: 0.7 }}>Bachelor of Engineering / Bachelor of Fine Arts</p>
-                            <p style={{ fontSize: '20px', opacity: 0.7 }}>University of Auckland</p>
+                            <h1 style={{ fontFamily: 'Chunk Bold, sans-serif', fontSize: '190px', margin: 0, lineHeight: '0.7', marginBottom: 50 }}>ella <br /> pan. </h1>
+                            <p style={{ fontSize: '18px', opacity: 0.7, }}>Bachelor of Engineering / Bachelor of Fine Arts</p>
+                            <p style={{ fontSize: '18px', opacity: 0.7, lineHeight: '0.2' }}>University of Auckland</p>
                         </div>
                     </div>
 
                     {/* ── LAYER 3: Blob "windows" ── */}
-                    <div style={{ position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none', opacity: scrollProgress > 0.01 ? 0 : 1, transition: 'opacity 0.3s ease' }}>
+                    <div style={{ position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none', opacity: scrollProgress > 0.01 ? 0 : 1, transition: 'opacity 0.6s ease' }}>
                         {blobStyles.map((s, i) => (
                             <div key={i} style={{
                                 position: 'absolute',
@@ -175,10 +202,10 @@ function ScrollReveal() {
                                             transition: 'transform 0.1s linear',
                                         }}
                                     >
-                                        <div className={styles.titleTextContainer} style={{ color: '#04326b' }}>
-                                            <h1 style={{ fontSize: '128px', margin: 0 }}>ELLA PAN</h1>
-                                            <p style={{ fontSize: '20px', opacity: 0.7 }}>Bachelor of Engineering / Bachelor of Fine Arts</p>
-                                            <p style={{ fontSize: '20px', opacity: 0.7 }}>University of Auckland</p>
+                                        <div className={styles.titleTextContainer} style={{ color: '#e2ff3b' }}>
+                                            <h1 style={{ fontFamily: 'Mini Hanzhen, sans-serif', fontSize: '210px', margin: 0, lineHeight: '1', textShadow: '0 0 10px rgba(174, 255, 61, 0.7)', marginBottom: 50 }}>潘逸鹛</h1>
+                                            <p style={{ fontSize: '18px', opacity: 0.7 }}>三年级 工学学士 / 美术学士</p>
+                                            <p style={{ fontSize: '18px', opacity: 0.7, lineHeight: '0.2' }}>奥克兰大学</p>
                                         </div>
                                     </div>
                                 </div>

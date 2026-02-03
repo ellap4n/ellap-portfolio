@@ -48,10 +48,9 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
-    padding: 1vh;
+    padding: 0vh;
     padding-top: 6vh;
     margin: 2vh 0;
-
 }
 
 .projectLegend {

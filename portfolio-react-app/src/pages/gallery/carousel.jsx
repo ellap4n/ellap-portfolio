@@ -9,7 +9,7 @@ import { useState, useRef, useEffect } from 'react';
 
 const GALLERY_ITEMS = [
     { img: snow2, alt: 'Snowy Landscape', title: 'Snowy Day', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'Captured during a quiet morning in the mountains. The light was soft and diffused through the clouds, giving everything an almost dreamlike quality.' },
-    { img: sun, alt: 'Sunny Day', title: 'Sunny Day', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'A rare break in the clouds while travelling through the countryside. The warmth of the light made the landscape feel alive.' },
+    { img: sun, alt: 'lost on the way home', title: 'lost on the way home', medium: 'fired ceramics', artdate: 'November 2025', artdescription: 'overgrown lamp, glazed with tenmoku and splashes of celadon and jade abbots' },
     { img: sun, alt: 'Another Sunny Day', title: 'Another Sunny Day', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'Taken just before sunset. The golden hour gave this scene a completely different mood compared to the earlier shot.' },
     { img: fmmart, alt: 'FM Mart', title: 'FM Mart', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'A snapshot of the local FM Mart, capturing the vibrant colors and bustling atmosphere.' },
     { img: fmmart, alt: 'FM Mart', title: 'FM Mart', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'A snapshot of the local FM Mart, capturing the vibrant colors and bustling atmosphere.' }

@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 function ProjectSection() {
     const { id } = useParams();
     const [selectedProject, setSelectedProject] = useState(Number(id) || 0);
+
     const projectList = [
         { id: 0, title: "Portfolio Website Build", date: "Jan - Feb 2026", variant: "personalCard" },
         { id: 1, title: "Drone Build", date: "Mar - Apr 2026", variant: "personalCard" },

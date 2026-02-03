@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Manic';
+    src: url('../../assets/fonts/Manic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hiker TM';
+    src: url('../../assets/fonts/hikerTM-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.galleryHeading {
+    font-family: 'Manic', sans-serif;
+    font-size: calc(5vh + 10px);
+}
+
+.imageDescriptionText {
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    margin-right: 5vw;
+    font-size: 10px;
+    color: #ffffff;
+}
+
 .highlightPiece {
     background-image: url(../../assets/snow2.JPG);
     width: 100vw;
@@ -20,6 +48,7 @@
     width: 60%;
     height: 70%;
     margin-top: 3vh;
+    padding: 3vh;
 }
 
 .galleryCarousel {
@@ -70,6 +99,8 @@
     outline: 2px solid rgba(255, 255, 255, 0.6);
     outline-offset: -2px;
 }
+
+
 
 .commissionSection {
     display: flex;
