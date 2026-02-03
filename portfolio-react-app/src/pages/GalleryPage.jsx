@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import '../App.css';
-import './gallery.module.css';
+import './gallery/gallery.module.css';
+import HighlightPiece from './gallery/highlightPiece.jsx';
+import GalleryCarousel from './gallery/carousel.jsx';
+import Commission from './gallery/commission.jsx';
+import InstagramFeed from '../components/instagramfeed.jsx';
 
 function GalleryPage() {
     return (
         <div>
-            <h2>Ella's Art Gallery</h2>
-            <p>This is a new page!</p>
+            <HighlightPiece />
+            <GalleryCarousel />
+            <Commission />
+            <InstagramFeed />
         </div>
     );
 }

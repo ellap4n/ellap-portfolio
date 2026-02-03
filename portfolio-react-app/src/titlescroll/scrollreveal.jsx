@@ -10,7 +10,7 @@ import AboutMe from './aboutme';
    offsetX/Y   – static offset from cursor so blobs fan out
    ───────────────────────────────────────────── */
 const BLOB_CONFIGS = [
-    { size: 100, lag: 0.04, morphSpeed: 3, offsetX: 10, offsetY: 2 },
+    { size: 200, lag: 0.04, morphSpeed: 3, offsetX: 10, offsetY: 2 },
 ];
 
 /* 8 random values used for the two-value border-radius shorthand */
@@ -123,11 +123,7 @@ function ScrollReveal() {
                     style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}
                 >
                     {/* ── LAYER 1 (back): AboutMe – always visible underneath ── */}
-                    <div style={{
-                        position: 'absolute', inset: 0,
-                        background: '#0f3460',
-                        zIndex: 1,
-                    }}>
+                    <div>
                         <AboutMe />
                     </div>
 
@@ -179,7 +175,7 @@ function ScrollReveal() {
                                             transition: 'transform 0.1s linear',
                                         }}
                                     >
-                                        <div className={styles.titleTextContainer}>
+                                        <div className={styles.titleTextContainer} style={{ color: '#04326b' }}>
                                             <h1 style={{ fontSize: '128px', margin: 0 }}>ELLA PAN</h1>
                                             <p style={{ fontSize: '20px', opacity: 0.7 }}>Bachelor of Engineering / Bachelor of Fine Arts</p>
                                             <p style={{ fontSize: '20px', opacity: 0.7 }}>University of Auckland</p>

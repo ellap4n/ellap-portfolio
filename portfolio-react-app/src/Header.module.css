@@ -27,7 +27,7 @@ nav {
 footer {
     bottom: 0;
     line-height: 0.8;
-    width: 100vw;
+    width: 100%;
     padding: 1vh 1vw;
     z-index: 10;
     display: grid;
@@ -52,6 +52,7 @@ footer {
 
 .skillsSection {
     width: 90vw;
+    height: auto;
     position: relative;
     background-color: rgb(176, 182, 188);
     display: grid;
@@ -87,6 +88,7 @@ footer {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     min-height: 100px;
+    height: auto;
     width: 100%;
 }
 
