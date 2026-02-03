@@ -1,5 +1,7 @@
-projectPage {
-    background-color: rgb(239, 63, 63);
+.projectPage {
+    padding-top: 15vh;
+    background-color: rgb(255, 255, 255);
+
 }
 
 .projectTitle {
@@ -7,10 +9,9 @@ projectPage {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 0;
     height: 20vh;
     padding: 1vh 5vw;
-    padding-top: 3vh;
     background-color: #ffffff;
 }
 

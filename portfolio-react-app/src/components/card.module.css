@@ -18,14 +18,25 @@
 }
 
 .previewCard {
-    background: #ffffff;
-    flex: 0 0 25%;
+    background: #182c4a;
+    color: white;
+    opacity: 0.7;
+    flex: 0 0 auto;
+    padding: calc(1vh + 10px);
     min-width: calc(40px + 5vw);
+    width: calc(100px + 15vw);
     scroll-snap-align: start;
-    height: auto;
+    height: calc(150px + 2vh);
     border-radius: 45px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.previewCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 15px rgba(158, 213, 255, 0.8);
 }
 
 .previewText {
@@ -41,6 +52,13 @@
     border-radius: 30px;
     opacity: 0.85;
     background-color: rgb(214, 216, 225);
+    color: #43515d;
+}
+
+.personalCard:hover {
+    transform: scale(1.02);
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 10px 5px rgba(235, 236, 244, 0.3);
 }
 
 .uniCard {
@@ -50,6 +68,13 @@
     border-radius: 30px;
     opacity: 0.85;
     background-color: rgb(235, 239, 227);
+    color: #43515d;
+}
+
+.uniCard:hover {
+    transform: scale(1.02);
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 10px 5px rgba(237, 241, 234, 0.3);
 }
 
 .workCard {
@@ -59,6 +84,13 @@
     border-radius: 30px;
     opacity: 0.85;
     background-color: rgb(218, 230, 232);
+    color: #43515d;
+}
+
+.workCard:hover {
+    transform: scale(1.02);
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 10px 5px rgba(243, 246, 248, 0.3);
 }
 
 .activePreviewCard {

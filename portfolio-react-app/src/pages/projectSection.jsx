@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useState, } from 'react'
 import '../App.css';
 import './projects.module.css';
 import styles from './projects.module.css';
 import Card from '../components/card';
+import { useParams } from 'react-router-dom';
 
 function ProjectSection() {
-    const [selectedProject, setSelectedProject] = useState(0);
-
+    const { id } = useParams();
+    const [selectedProject, setSelectedProject] = useState(Number(id) || 0);
     const projectList = [
         { id: 0, title: "Portfolio Website Build", date: "Jan - Feb 2026", variant: "personalCard" },
         { id: 1, title: "Drone Build", date: "Mar - Apr 2026", variant: "personalCard" },
@@ -22,6 +23,8 @@ function ProjectSection() {
             default: return 'rgb(218, 230, 232)';
         }
     }
+
+
     return (
 
         <section id="projectSection" className={styles.projectSection}>
