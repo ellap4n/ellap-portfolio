@@ -1,0 +1,97 @@
+.projectPage {
+    padding-top: 15vh;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.projectTitle {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    height: 20vh;
+    padding: 1vh 5vw;
+    background-color: #ffffff;
+}
+
+.projectSection {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    height: 80vh;
+    background-color: #a5aab0;
+    background-image: url('../assets/beach.JPG');
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: darken;
+}
+
+.leftContainer {
+    /*left side project card container, vertically scrollable*/
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 40px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+.leftContainer>div {
+    width: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    padding-top: 6vh;
+    margin: 2vh 0;
+
+}
+
+.projectLegend {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    max-width: 97vw;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legendCircle {
+    /*legend colour circle*/
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.imageDescriptionText {
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    margin-right: 5vw;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+/* fav project section */
+.favProjectSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 4vh;
+    background-color: #1f3a51;
+    color: white;
+}

@@ -5,7 +5,7 @@ import './gallery.module.css';
 function GalleryPage() {
     return (
         <div>
-            <h1>Gallery Page</h1>
+            <h2>Ella's Art Gallery</h2>
             <p>This is a new page!</p>
         </div>
     );

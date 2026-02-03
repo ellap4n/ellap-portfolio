@@ -1,0 +1,21 @@
+.contactMeContainer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px;
+    background-color: rgb(176, 182, 188);
+}
+
+.contactMeImg {
+    width: 80%;
+    margin-right: 50px;
+}
+
+.contactMeText {
+    font-size: calc(1.5vh + 8px);
+    color: #000000;
+    line-height: 1.5rem;
+    margin-left: 20px;
+}

@@ -5,6 +5,7 @@ import Header from './Header.jsx';
 import HomePage from './HomePage.jsx';
 import ProjectsPage from './pages/ProjectPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:id" element={<ProjectsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </main>
+      <Footer /> {/* Website Footer! */}
     </BrowserRouter >
   );
 }

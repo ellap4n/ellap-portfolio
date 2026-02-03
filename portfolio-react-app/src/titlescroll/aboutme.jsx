@@ -1,10 +1,22 @@
 import React from 'react'
-import './Header.module.css';
-import styles from './Header.module.css';
-import downArrow from './assets/down.png';
+import './scrollreveal.module.css';
+import styles from './scrollreveal.module.css';
+import downArrow from '../assets/down.png';
 
 function AboutMe() {
     {/* About Me Section */ }
+
+    const handleScrollToSkills = (e) => {
+        e.preventDefault();
+        const skillsSection = document.getElementById('skillsSection');
+        const navbarHeight = 80; // Adjust this value based on your navbar height
+        const offsetPosition = skillsSection.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className={styles.aboutMeContainer}>
             <div className={styles.aboutMe}>
@@ -14,7 +26,11 @@ function AboutMe() {
                     </p>
                 </div>
             </div>
-            <img src={downArrow} alt="Down Arrow" className={styles.downArrowImg} />
+            <a href="#skillsSection" onClick={handleScrollToSkills}>
+                <img src={downArrow} alt="Down Arrow" className={styles.downArrowImg} />
+            </a>
+            <p className={styles.imageDescriptionText}>
+                Image taken in Otaku, Sapporo (札幌市, 北海道), Jan 2025. Mju Olympus I, Kodak Gold 400. </p>
         </div>
     )
 }
