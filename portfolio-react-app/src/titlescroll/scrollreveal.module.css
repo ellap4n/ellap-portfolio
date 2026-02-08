@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'MANIC';
+    src: url('../../assets/fonts/MANIC.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.aboutMeFont {
+    font-family: 'MANIC', sans-serif;
+}
+
 .titleSection {
 
     position: absolute;
@@ -75,7 +87,6 @@
     box-sizing: border-box;
     color: #04152b;
     position: relative;
-    margin-top: 15vh;
     margin-right: 5vw;
     width: 50vw;
     height: auto;

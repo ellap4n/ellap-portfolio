@@ -19,3 +19,14 @@
     line-height: 1.5rem;
     margin-left: 20px;
 }
+
+.contactMeIcon {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+.contactMeIcon:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}

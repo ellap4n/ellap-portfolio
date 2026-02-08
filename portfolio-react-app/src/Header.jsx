@@ -10,7 +10,7 @@ function Header() {
   return (
     <header>
       <nav>
-        <Link to="/">home</Link>
+        <Link to="/home">home</Link>
         <Link to="/projects">projects</Link>
         <Link to="/gallery">gallery</Link>
       </nav>

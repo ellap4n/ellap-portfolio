@@ -6,7 +6,7 @@ function Card({ title, description, artdescription, artdate, medium, date, varia
     {/* Skills Card */ }
     return (
         <div className={`${styles.cardStyle} ${styles[variant]}`} style={style}>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             <h5>{medium !== undefined ? ' ' + medium : ''} </h5>
             <h6> {date}</h6>
             <div>{description}</div>

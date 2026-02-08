@@ -5,8 +5,8 @@ import styles from './projects.module.css';
 
 function FavProject() {
     return (
-        <div className={styles.favProjectSection}>
-            <h2>My Favorite Project</h2>
+        <div id="favproject" className={styles.favProjectSection}>
+            <h2>Currently working on . . .</h2>
             <p>This project showcases my skills in React and web development.</p>
         </div>
     );

@@ -4,13 +4,12 @@ import styles from './Header.module.css';
 import Card from './components/card';
 import { Link } from 'react-router-dom';
 
-
 function ProjectCarousel() {
     //* Project Preview Cards Section *//
 
     return (
         <div className={styles.projectPreviewSection}>
-            <h2 style={{ color: '#ffffff' }}>Projects</h2>
+            <h2 style={{ color: '#ffffff' }}> {'<'} PROJECTS {'>'}</h2>
             <div className={styles.carouselContainer}>
                 <Link to='/projects/0'>
                     <Card title="Portfolio Website Build" description={<p>Project 1 Description</p>} variant="previewCard" />
