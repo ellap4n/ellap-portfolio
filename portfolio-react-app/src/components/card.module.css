@@ -121,6 +121,68 @@
     margin-bottom: 10px;
 }
 
+.cardContent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.mainProjectImageLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: stretch;
+    flex-shrink: 0;
+    padding-right: 10%;
+}
+
+.mainImage {
+    width: 200px;
+    height: 35vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.imageStackLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 35vh;
+}
+
+.imageStacked {
+    width: 100px;
+    height: calc((35vh - 10px) / 2);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.imageSkinny {
+    width: 80px;
+    height: 35vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.imageLeftLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 30vh;
+}
+
+.imageLeft {
+    width: 100px;
+    flex: 1;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
 .galleryCard {
     text-align: left;
     line-height: 1;

@@ -2,17 +2,19 @@ import '../../App.css';
 import './gallery.module.css';
 import styles from './gallery.module.css';
 import Card from '../../components/card.jsx';
-import snow2 from '../../assets/snow2.JPG';
+import hema1 from '../../assets/projectphotos/hema1.JPG';
+import lamp2 from '../../assets/projectphotos/lamp2.JPG';
+import hand from '../../assets/projectphotos/hand.JPG';
 import sun from '../../assets/sun.JPG';
 import fmmart from '../../assets/fmmart.JPG';
 import { useState, useRef, useEffect } from 'react';
 
 const GALLERY_ITEMS = [
-    { img: snow2, alt: 'Snowy Landscape', title: 'Snowy Day', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'Captured during a quiet morning in the mountains. The light was soft and diffused through the clouds, giving everything an almost dreamlike quality.' },
-    { img: sun, alt: 'lost on the way home', title: 'lost on the way home', medium: 'fired ceramics', artdate: 'November 2025', artdescription: 'overgrown lamp, glazed with tenmoku and splashes of celadon and jade abbots' },
-    { img: sun, alt: 'Another Sunny Day', title: 'Another Sunny Day', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'Taken just before sunset. The golden hour gave this scene a completely different mood compared to the earlier shot.' },
-    { img: fmmart, alt: 'FM Mart', title: 'FM Mart', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'A snapshot of the local FM Mart, capturing the vibrant colors and bustling atmosphere.' },
-    { img: fmmart, alt: 'FM Mart', title: 'FM Mart', medium: 'Digital Photography', artdate: 'January 2024', artdescription: 'A snapshot of the local FM Mart, capturing the vibrant colors and bustling atmosphere.' }
+    { img: hand, alt: 'the people we meet, even in passing', title: 'the people we meet, even in passing', medium: 'Air Dry Clay, Textiles, Sewing Thread', artdate: 'February 2026', artdescription: 'thank you to the lady at the corner who taught me kindness' },
+    { img: hema1, alt: 'hematopoiesis', title: 'Hematopoiesis', medium: 'Texiles, Sewing Thread', artdate: 'February 2026', artdescription: 'Hematopoiesis—the process of creating new blood cells in the bone marrow—is a highly complex, tightly regulated process that can be profoundly affected by genetic, environmental, and pathological factors. These factors can influence the rate of blood cell production, the differentiation of stem cells, or cause, such as in the case of cancer or infections, the production of dysfunctional cells.' },
+    { img: lamp2, alt: 'Ancestral Rites', title: 'Ancestral Rites', medium: 'Fired Ceramics', artdate: 'November 2025', artdescription: 'overgrown lamp, glazed with tenmoku and splashes of celadon and jade abbots' },
+    { img: sun, alt: 'Another Sunny Day', title: 'Sun Moon Lake', medium: 'Analogue Photography', artdate: 'January 2025', artdescription: 'Taiwan from my perspective' },
+    { img: fmmart, alt: 'FM Mart', title: 'Local Family Mart', medium: 'Analogue Photography', artdate: 'January 2025', artdescription: 'A snapshot of the local FM Mart, unusual in its countryside setting.' },
 ];
 
 function GalleryCarousel() {

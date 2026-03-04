@@ -13,7 +13,7 @@ function App() {
       <Header /> {/* Website Header! */}
       <main>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:id" element={<ProjectsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />

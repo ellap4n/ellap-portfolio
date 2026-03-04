@@ -5,6 +5,13 @@ import styles from './projects.module.css';
 import Card from '../components/card';
 import { useParams } from 'react-router-dom';
 
+//images for projects
+
+import warman from '../assets/projectphotos/warman.JPG';
+import warman1 from '../assets/projectphotos/warman1.JPG';
+import warman2 from '../assets/projectphotos/warman2.JPG';
+import warmanvid from '../assets/projectphotos/warmanvid.mov';
+
 function ProjectSection() {
     const { id } = useParams();
     const [selectedProject, setSelectedProject] = useState(Number(id) || 0);
@@ -12,9 +19,8 @@ function ProjectSection() {
     const projectList = [
         { id: 0, title: "Portfolio Website Build", date: "Jan - Feb 2026", variant: "personalCard" },
         { id: 1, title: "Drone Build", date: "Mar - Apr 2026", variant: "personalCard" },
-        { id: 2, title: "Mini-Warman Challenge", date: "May - Jun 2026", variant: "uniCard" },
-        { id: 3, title: "Amoeba Light Sculpture", date: "Jul - Aug 2026", variant: "workCard" },
-        { id: 4, title: "C 'Boxed in' Game", date: "Sep - Oct 2026", variant: "uniCard" },
+        { id: 2, title: "Mini-Warman Challenge", date: "Feb - June 2025", description: "Course project for MECHENG235", variant: "uniCard", mainvideo: warmanvid, image1: warman, image2: warman1, image3: warman2 },
+        { id: 3, title: "C 'Boxed in' Game", date: "Sep - Oct 2026", variant: "uniCard" },
     ]
     function getColorForVariant(variant) {
         switch (variant) {
@@ -50,6 +56,11 @@ function ProjectSection() {
                     title={projectList[selectedProject].title}
                     date={projectList[selectedProject].date}
                     description={<p>{projectList[selectedProject].description}</p>}
+                    mainimage={projectList[selectedProject].mainimage}
+                    mainvideo={projectList[selectedProject].mainvideo}
+                    image1={projectList[selectedProject].image1}
+                    image2={projectList[selectedProject].image2}
+                    image3={projectList[selectedProject].image3}
                     variant="mainProjectCard"
                     style={{ backgroundColor: getColorForVariant(projectList[selectedProject].variant) }}
                 />

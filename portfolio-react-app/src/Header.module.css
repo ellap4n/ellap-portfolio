@@ -43,11 +43,10 @@ footer {
 }
 
 .logoImg {
-    border-radius: 50%;
-    width: calc(120px + 4vh);
-    height: calc(20px + 4vh);
-    padding: 2vh 20vw;
-    object-fit: cover;
+    width: auto;
+    height: calc(30px + 4vh);
+    padding: 0.5vh 20vw;
+    object-fit: contain;
 }
 
 .skillsSection {
