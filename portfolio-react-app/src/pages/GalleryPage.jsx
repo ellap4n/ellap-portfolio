@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import '../App.css';
-import './gallery.module.css';
+import './gallery/gallery.module.css';
+import HighlightPiece from './gallery/highlightPiece.jsx';
+import GalleryCarousel from './gallery/carousel.jsx';
+import Commission from './gallery/commission.jsx';
+import ArtAboutMe from './gallery/artaboutme.jsx';
+import InstagramFeed from '../components/instagramfeed.jsx';
 
 function GalleryPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top on component mount
+    }, []);
     return (
         <div>
-            <h2>Ella's Art Gallery</h2>
-            <p>This is a new page!</p>
+            <HighlightPiece />
+            <GalleryCarousel />
+            <ArtAboutMe />
+            <InstagramFeed />
+            <Commission />
         </div>
     );
 }
