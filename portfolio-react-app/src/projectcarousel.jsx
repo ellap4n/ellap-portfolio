@@ -18,7 +18,7 @@ function ProjectCarousel() {
                     <Card title="Mini-Warman Challenge" description={<p>Mechatronics Design project <br />UOA MECHENG235</p>} variant="previewCard" />
                 </Link>
                 <Link to='/projects/2'>
-                    <Card title="Drone Build" description={<p>Mid-Semester FPV Drone Build</p>} variant="previewCard" />
+                    <Card title="Drone Build" description={<p>Mid-Semester Personal Group FPV Drone Build</p>} variant="previewCard" />
                 </Link>
                 <Link to='/projects/1'>
                     <Card title="MDC Trophy Design" description={<p>Digital Sculpting and CAD <br /> Blender + TinkerCAD</p>} variant="previewCard" />
