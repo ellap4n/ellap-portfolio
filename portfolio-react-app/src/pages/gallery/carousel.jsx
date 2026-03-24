@@ -7,7 +7,7 @@ import lamp2 from '../../assets/galleryphotos/lamp2.JPG';
 import hand from '../../assets/galleryphotos/hand.JPG';
 import sun from '../../assets/sun.JPG';
 import fmmart from '../../assets/fmmart.JPG';
-import maandba from '../../assets/galleryphotos/momanddad.JPG';
+import maandba from '../../assets/galleryphotos/momanddad.jpg';
 import { useState, useRef, useEffect } from 'react';
 
 const GALLERY_ITEMS = [
