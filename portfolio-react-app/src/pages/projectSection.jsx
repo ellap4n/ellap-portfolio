@@ -30,11 +30,11 @@ function ProjectSection() {
     const [selectedProject, setSelectedProject] = useState(Number(id) || 0);
 
     const projectList = [
-        { id: 0, title: "C 'Boxed in' Game", date: "Aug - Nov 2024", variant: "uniCard" },
-        { id: 1, title: "MDC Trophy Design", date: "September 2025", variant: "personalCard", mainvideo: mdcvid, image1: mdc1, image2: mdc2, image3: mdc3 },
-        { id: 2, title: "Drone Build", date: "May - Aug 2025", variant: "personalCard", mainimage: drone, image1: drone1, image2: drone2, image3: drone3 },
-        { id: 3, title: "Mini-Warman Challenge", date: "Feb - June 2025", description: "Course project for MECHENG235", variant: "uniCard", mainvideo: warmanvid, image1: warman, image2: warman1, image3: warman2 },
-        { id: 4, title: "Portfolio Website Build", date: "Jan - Feb 2026", variant: "personalCard", mainimage: portfolioweb },
+        { id: 0, title: "C 'Boxed in' Game", date: "Aug - Nov 2024", description: "C Language programme. First exposure to coding through my ENGGEN 131 paper. ", variant: "uniCard" },
+        { id: 1, title: "MDC Trophy Design", date: "September 2025", description: "I designed a fun little trophy project for my club, MECHA's Design and Build Competition! I self-learnt blender for this, utilising it's 3d sculpting and mesh manipulation capabilities.", variant: "personalCard", mainvideo: mdcvid, image1: mdc1, image2: mdc2, image3: mdc3 },
+        { id: 2, title: "Drone Build", date: "May - Aug 2025", description: "A collaboration with my peers to design and build a drone for a short inter-sem project. I led the Mechanical design and assembly.", variant: "personalCard", mainimage: drone, image1: drone1, image2: drone2, image3: drone3 },
+        { id: 3, title: "Mini-Warman Challenge", date: "Feb - June 2025", description: "This challenging group course project for MECHENG235 had us problem solving, prototyping, building, and coding in a extremely fast-paced 10 week build project.", variant: "uniCard", mainvideo: warmanvid, image1: warman, image2: warman1, image3: warman2 },
+        { id: 4, title: "Portfolio Website Build", date: "Jan - Feb 2026", description: "This website you are currently viewing was built from scratch in React and Vite, using Javascript, CSS and HTML. It's a summer project with the goal to improve my web development skills, which I thought were lacking.", variant: "personalCard", mainimage: portfolioweb },
 
     ]
     function getColorForVariant(variant) {

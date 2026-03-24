@@ -7,7 +7,8 @@ function FavProject() {
     return (
         <div id="favproject" className={styles.favProjectSection}>
             <h2>Currently working on . . .</h2>
-            <p>This project showcases my skills in React and web development.</p>
+            <h3>Heart Hackathon!</h3>
+            <p>An exciting opportunity to be a part of UoA's first ever Heart Hackathon Team!</p>
         </div>
     );
 }
