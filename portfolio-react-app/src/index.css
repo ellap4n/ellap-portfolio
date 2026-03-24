@@ -133,10 +133,6 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
-    {
-    /*nav underline color change */
-  }
-
   a:hover {
     color: #e3e8eb;
     text-shadow: 0 0 10px rgba(174, 209, 231, 0.9);
