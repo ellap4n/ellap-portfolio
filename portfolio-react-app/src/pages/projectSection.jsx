@@ -12,7 +12,7 @@ import warman1 from '../assets/projectphotos/warman1.JPG';
 import warman2 from '../assets/projectphotos/warman2.JPG';
 import warmanvid from '../assets/projectphotos/warmanvid.mov';
 
-import mdcvid from '../assets/projectphotos/mdcvid.mov';
+import mdcvid from '../assets/projectphotos/mdcvid.MOV';
 import mdc1 from '../assets/projectphotos/mdc1.JPG';
 import mdc2 from '../assets/projectphotos/mdc2.JPG';
 import mdc3 from '../assets/projectphotos/mdc3.JPG';
