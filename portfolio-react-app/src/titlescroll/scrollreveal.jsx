@@ -163,7 +163,7 @@ function ScrollReveal() {
                         }}
                     >
                         <div className={styles.titleTextContainer}>
-                            <h1 style={{ fontFamily: 'Chunk Bold, sans-serif', fontSize: '190px', margin: 0, lineHeight: '0.7', marginBottom: 50 }}>ella <br /> pan. </h1>
+                            <h1 style={{ fontFamily: 'Chunk Bold, sans-serif', fontSize: 'clamp(120px, 14vw, 280px)', margin: 0, lineHeight: '0.7', marginBottom: 50 }}>ella <br /> pan. </h1>
                             <p style={{ fontSize: '18px', opacity: 0.7, }}>Bachelor of Engineering / Bachelor of Fine Arts</p>
                             <p style={{ fontSize: '18px', opacity: 0.7, lineHeight: '0.2' }}>University of Auckland</p>
                         </div>
@@ -203,7 +203,7 @@ function ScrollReveal() {
                                         }}
                                     >
                                         <div className={styles.titleTextContainer} style={{ color: '#e2ff3b' }}>
-                                            <h1 style={{ fontFamily: 'Mini Hanzhen, sans-serif', fontSize: '210px', margin: 0, lineHeight: '1', textShadow: '0 0 10px rgba(174, 255, 61, 0.7)', marginBottom: 50 }}>潘逸鹛</h1>
+                                            <h1 style={{ fontFamily: 'Mini Hanzhen, sans-serif', fontSize: 'clamp(130px, 16vw, 310px)', margin: 0, lineHeight: '1', textShadow: '0 0 10px rgba(174, 255, 61, 0.7)', marginBottom: 50 }}>潘逸鹛</h1>
                                             <p style={{ fontSize: '18px', opacity: 0.7 }}>三年级 工学学士 / 美术学士</p>
                                             <p style={{ fontSize: '18px', opacity: 0.7, lineHeight: '0.2' }}>奥克兰大学</p>
                                         </div>

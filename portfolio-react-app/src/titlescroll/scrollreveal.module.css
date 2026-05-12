@@ -1,17 +1,4 @@
-@font-face {
-    font-family: 'MANIC';
-    src: url('../../assets/fonts/MANIC.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-.aboutMeFont {
-    font-family: 'MANIC', sans-serif;
-}
-
 .titleSection {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -51,7 +38,7 @@
     color: #ffffff;
     padding: 5vh 5vw;
     padding-bottom: 5vw;
-    line-height: 0.7;
+    line-height: clamp(0.5, 0.8vw + 0.4, 1.2);
 }
 
 .aboutMeContainer {
@@ -79,7 +66,7 @@
     height: 85vh;
     width: 100vw;
     text-align: right;
-    line-height: 1.2rem;
+    line-height: clamp(1rem, 1.3vw + 0.8rem, 1.8rem);
     color: #ffffff;
 }
 
@@ -92,8 +79,8 @@
     height: auto;
     max-width: 50vw;
     padding: 1vh 2vw;
-    font-size: calc(2vh + 5px);
-    line-height: calc (1.5em + 0.8vh);
+    font-size: clamp(0.75rem, 1.8vw + 0.6rem, 2.4rem);
+    line-height: clamp(1.1rem, 2.7vw + 0.9rem, 3.8rem);
     text-align: right;
 }
 
@@ -109,6 +96,6 @@
     text-align: right;
     margin: 0;
     margin-right: 5vw;
-    font-size: 10px;
+    font-size: clamp(7px, 1.2vw + 0.4rem, 16px);
     color: #ffffff;
 }

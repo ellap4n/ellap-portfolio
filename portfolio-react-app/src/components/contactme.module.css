@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    padding: 100px;
+    padding: clamp(40px, 8vw, 120px);
     background-color: rgb(176, 182, 188);
 }
 
@@ -17,14 +17,14 @@
 .contactMeText {
     font-size: calc(1.5vh + 8px);
     color: #000000;
-    line-height: 1.5rem;
+    line-height: clamp(1.2rem, 1.8vh + 12px, 2.4rem);
     margin-left: 20px;
 }
 
 .contactMeIcon {
-    width: 25px;
-    height: 25px;
-    margin: 10px;
+    width: clamp(20px, 2.5vw, 32px);
+    height: clamp(20px, 2.5vw, 32px);
+    margin: clamp(8px, 1vw, 14px);
 }
 
 .contactMeIcon:hover {

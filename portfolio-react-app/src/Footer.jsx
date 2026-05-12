@@ -1,10 +1,10 @@
 import React from 'react'
 import './Header.module.css';
-import logo from './assets/temp_logo.jpg';
+import footerlogo from './assets/eplogoblue.png';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 
-console.log(logo);
+console.log(footerlogo);
 
 function Footer() {
     return (
@@ -19,7 +19,7 @@ function Footer() {
                 <p><Link to="/gallery" style={{ color: '#0049a2' }}>Gallery</Link></p>
             </div>
             <div className={styles.footerThirdColumn}>
-                <img src={logo} alt="Ella's Logo" className={styles.logoImgFooter} />
+                <img src={footerlogo} alt="Ella's Logo" className={styles.logoImgFooter} />
                 <p>© 2024 Ella Pan. All rights reserved.</p>
             </div>
 

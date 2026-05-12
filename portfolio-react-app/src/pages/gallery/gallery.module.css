@@ -22,7 +22,7 @@
     text-align: right;
     margin: 0;
     margin-right: 5vw;
-    font-size: 10px;
+    font-size: clamp(8px, 0.6rem + 0.2vw, 12px);
     color: #ffffff;
 }
 
@@ -30,7 +30,8 @@
     background-image: url(../../assets/snow2.JPG);
     width: 100vw;
     height: 50vh;
-    padding: 10vh 2vw;
+    padding: 8vh 2vw;
+    padding-bottom: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +49,7 @@
     width: 60%;
     height: 70%;
     margin-top: 3vh;
-    padding: 3vh;
+    padding: 2vh;
 }
 
 .galleryCarousel {
@@ -56,12 +57,58 @@
     overflow-x: auto;
     overflow-y: hidden;
     gap: 15px;
-    padding: 20px 10px;
+    padding-top: 8vh;
+    padding-right: clamp(60px, 8vw, 150px);
+    padding-left: clamp(60px, 8vw, 150px);
     scroll-behavior: smooth;
     scrollbar-width: none;
-    min-height: 200px;
+    min-height: clamp(160px, 15vw, 240px);
     width: 100vw;
-    padding-top: 10vh;
+}
+
+.galleryCarouselWrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expandedGallerySection {
+    width: min(92vw, 1200px);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.25s ease;
+    margin: 0;
+}
+
+.expandedGallerySectionVisible {
+    max-height: clamp(300px, 35vw, 520px);
+    opacity: 1;
+    margin-bottom: 5vh;
+}
+
+.expandedGalleryTitle {
+    margin: 0 0 0.8rem;
+    text-align: left;
+    color: #f3f7fb;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 0.03em;
+}
+
+.expandedGalleryTrack {
+    display: flex;
+    gap: 0.3rem;
+    overflow-x: auto;
+    padding-bottom: 3rem;
+    scrollbar-width: thin;
+}
+
+.expandedGalleryImage {
+    height: clamp(160px, 20vw, 280px);
+    width: auto;
+    min-width: clamp(120px, 15vw, 220px);
+    object-fit: cover;
 }
 
 .imageContainer {

@@ -19,7 +19,8 @@
 .projectSection {
     display: grid;
     grid-template-columns: 2fr 5fr;
-    height: 80vh;
+    width: 100vw;
+    min-height: clamp(250px, 80vh, 1200px);
     background-color: #a5aab0;
     background-image: url('../assets/beach.JPG');
     background-size: cover;
@@ -34,8 +35,8 @@
     flex-direction: column;
     overflow-y: auto;
     align-items: center;
-    gap: 25px;
-    padding: 20px 40px;
+    gap: clamp(12px, 3vw, 25px);
+    padding: clamp(12px, 2.5vh, 20px) clamp(16px, 4vw, 40px);
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
@@ -48,9 +49,11 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
-    padding: 0vh;
-    padding-top: 6vh;
-    margin: 2vh 0;
+    padding: 0;
+    padding-top: clamp(12px, 4vh, 60px);
+    padding-right: clamp(20px, 2vw, 40px);
+    padding-left: clamp(12px, 4vw, 60px);
+    margin: clamp(8px, 1.5vh, 20px) 0;
 }
 
 .projectLegend {
@@ -58,7 +61,7 @@
     gap: 20px;
     justify-content: flex-end;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: clamp(11px, 1.2rem + 0.3vw, 18px);
     flex-wrap: wrap;
     max-width: 97vw;
 }
@@ -82,7 +85,7 @@
     text-align: right;
     margin: 0;
     margin-right: 5vw;
-    font-size: 10px;
+    font-size: clamp(8px, 0.7rem + 0.3vw, 13px);
     color: #ffffff;
 }
 
