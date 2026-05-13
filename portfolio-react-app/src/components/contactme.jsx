@@ -14,7 +14,7 @@ function ContactMe() {
                 <p className={styles.contactMeText}>e. ellap4816@gmail.com</p>
                 <p className={styles.contactMeText}>auckland, new zealand</p>
                 <div className={styles.contactMeIcons}>
-                    <a href="https://www.linkedin.com/in/ella-pan-1234/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/ella-pan-19a66b298/" target="_blank" rel="noopener noreferrer">
                         <img src={linkedinIcon} alt="LinkedIn" className={styles.contactMeIcon} />
                     </a>
                     <a href="https://github.com/ella-pan" target="_blank" rel="noopener noreferrer">
