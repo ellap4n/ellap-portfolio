@@ -10,6 +10,12 @@ import lamp from '../../assets/galleryphotos/lamp.JPG';
 import lamp1 from '../../assets/galleryphotos/lamp1.JPG';
 import lamp2 from '../../assets/galleryphotos/lamp2.JPG';
 import hand from '../../assets/galleryphotos/hand.JPG';
+import motion1 from '../../assets/galleryphotos/motion1.jpg';
+import motion2 from '../../assets/galleryphotos/motion2.jpg';
+import motion3 from '../../assets/galleryphotos/motion3.jpg';
+import motion4 from '../../assets/galleryphotos/motion4.jpg';
+import motion5 from '../../assets/galleryphotos/motion5.jpg';
+import motion6 from '../../assets/galleryphotos/motion6.jpg';
 import sun from '../../assets/sun.JPG';
 import fmmart from '../../assets/fmmart.JPG';
 import maandba from '../../assets/galleryphotos/momanddad.jpg';
@@ -69,6 +75,15 @@ const GALLERY_ITEMS = [
         artdate: 'January 2025',
         artdescription: 'Japan, away from the metropolis',
         extraPhotos: [fmmart],
+    },
+    {
+        img: motion5,
+        alt: 'life moves on',
+        title: 'life moves on',
+        medium: 'Digital Photography',
+        artdate: 'May 2024',
+        artdescription: 'Subjects captured, stationary while Auckland moves in motion around them.',
+        extraPhotos: [motion1, motion2, motion3, motion4, motion5, motion6],
     },
 ];
 

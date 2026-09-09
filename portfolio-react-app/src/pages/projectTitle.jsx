@@ -1,29 +1,14 @@
-import { useState } from 'react'
-import '../App.css';
-import './projects.module.css';
 import styles from './projects.module.css';
 
 function ProjectTitle() {
     return (
-        <div>
-            <div className={styles.projectTitle}>
-                <h1 style={{ color: '#1f3a51' }}>My Projects!!</h1>
+        <div className={styles.title}>
+            <div className={styles.titleContainer}>
+                <h2 style={{ fontFamily: 'Hiker TM, sans-serif', fontSize: 'calc(30vh + 100px)', color: '#beff46' }} >PRoJectS.</h2>
             </div>
-            <div className={styles.projectLegend}>
-                <div className={styles.legendItem}>
-                    <div className={styles.legendCircle} style={{ backgroundColor: 'rgb(214, 216, 225)' }}></div>
-                    <span>Personal Project</span>
-                </div>
-                <div className={styles.legendItem}>
-                    <div className={styles.legendCircle} style={{ backgroundColor: 'rgb(235, 239, 227)' }}></div>
-                    <span>Uni Project</span>
-                </div>
-                <div className={styles.legendItem}>
-                    <div className={styles.legendCircle} style={{ backgroundColor: 'rgb(218, 230, 232)' }}></div>
-                    <span>Work Project</span>
-                </div>
-            </div>
-        </div>
+            <p className={styles.imageDescriptionText}>"Taiwan", 2024. 35mm Analogue Film, MJU Olympus I Fujifilm 400 Prenium.</p>
+        </div >
     );
 }
-export default ProjectTitle
+
+export default ProjectTitle;

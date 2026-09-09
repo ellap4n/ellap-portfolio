@@ -1,100 +1,732 @@
+/* ───────────────────────────────────────────────────────────────────────
+   FONTS
+   - Stedelijk (your uploaded assets/fonts/stedelijk.otf) is used ONLY for
+     the pixel "projects" wordmark in the header.
+   - Everything else on this page is forced to Helvetica, overriding
+     whatever font the rest of the site uses — see .projectPage below.
+   ─────────────────────────────────────────────────────────────────────── */
+@font-face {
+    font-family: 'Stedelijk';
+    src: url('../assets/fonts/stedelijk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('../assets/fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplayBold';
+    src: url('../assets/fonts/HelveticaNowDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplayLight';
+    src: url('../assets/fonts/HelveticaNowDisplay-Thin.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   THEME — change --accent-color here to re-theme "see more", the red
+   subtitle text, the favourite heart, and sort highlights in one go.
+   ─────────────────────────────────────────────────────────────────────── */
+:root {
+    --accent-color: #ef4a52;
+    --accent-color-soft: rgba(239, 74, 82, 0.12);
+    --text-dark: #1f3a51;
+    --text-muted: #8b93a1;
+    --lime: #cfe356;
+    --archive-bg: #d9eaf1;
+    --currently-bg: #16263c;
+    --currently-card: #1e3654;
+    /* jewel case size — sized so the case itself reads as >30% of the
+       viewport width, and so that with --case-gap, roughly half of the
+       neighbouring case peeks in on either side (see .carouselTrack).
+       For "half visible" the rule of thumb is case-width ≈ 50vw - gap.
+       Also capped by viewport height (min(...,58vh)) so the whole
+       featured section fits inside its 90vh budget — see .featuredSection. */
+    --case-width: clamp(360px, min(43vw, 62vh), 640px);
+    --case-gap: clamp(15px, 2.1vw, 28px);
+}
+
 .projectPage {
     max-width: 100vw;
-    padding-top: 15vh;
-    background-color: rgb(255, 255, 255);
-
-}
-
-.projectTitle {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0;
-    height: 20vh;
-    padding: 1vh 5vw;
+    overflow-x: hidden;
     background-color: #ffffff;
+    font-family: 'HelveticaNowDisplay', Helvetica, Arial, sans-serif;
 }
 
-.projectSection {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    width: 100vw;
-    min-height: clamp(250px, 80vh, 1200px);
-    background-color: #a5aab0;
-    background-image: url('../assets/beach.JPG');
-    background-size: cover;
-    background-position: bottom;
-    background-blend-mode: darken;
-}
-
-.leftContainer {
-    /*left side project card container, vertically scrollable*/
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-    overflow-y: auto;
-    align-items: center;
-    gap: clamp(12px, 3vw, 25px);
-    padding: clamp(12px, 2.5vh, 20px) clamp(16px, 4vw, 40px);
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-}
-
-.leftContainer>div {
-    width: 100%;
-}
-
-.mainContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    padding-top: clamp(12px, 4vh, 60px);
-    padding-right: clamp(20px, 2vw, 40px);
-    padding-left: clamp(12px, 4vw, 60px);
-    margin: clamp(8px, 1.5vh, 20px) 0;
-}
-
-.projectLegend {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    margin-bottom: 15px;
-    font-size: clamp(11px, 1.2rem + 0.3vw, 18px);
-    flex-wrap: wrap;
-    max-width: 97vw;
-}
-
-.legendItem {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.legendCircle {
-    /*legend colour circle*/
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
+/* ───────────────────────────────────────────────────────────────────────
+   HEADER — beach.JPG background, clearly bounded (flat tint, no fade to
+   white/transparent at any edge), pixel wordmark in Stedelijk
+   ─────────────────────────────────────────────────────────────────────── */
 
 .imageDescriptionText {
     padding: 0;
     text-align: right;
-    margin: 0;
+    margin-bottom: 10px;
+    margin-top: auto;
+    /* pushes it to the bottom of .title */
     margin-right: 5vw;
-    font-size: clamp(8px, 0.7rem + 0.3vw, 13px);
+    font-size: clamp(8px, 0.6rem + 0.2vw, 12px);
     color: #ffffff;
 }
 
-/* fav project section */
-.favProjectSection {
+.title {
+    background-image: url(../assets/beach.JPG);
+    width: 100vw;
+    height: 50vh;
+    padding: 8vh 2vw;
+    padding-bottom: 0;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
-    margin-bottom: 4vh;
-    background-color: #1f3a51;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 70%;
+    margin-top: 3vh;
+    padding: 2vh;
+}
+
+.pixelHeading {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-family: 'Stedelijk', 'Courier New', monospace;
+    text-transform: lowercase;
+    letter-spacing: 6px;
+    font-size: clamp(4rem, 6vw + 3rem, 9rem);
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   PLACEHOLDER COVER — shown anywhere an image/video hasn't been added yet
+   ─────────────────────────────────────────────────────────────────────── */
+.placeholderCover {
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6px;
+    background: var(--accent-color);
+    color: #ffffff;
+    font-size: clamp(9px, 0.6rem + 0.2vw, 12px);
+    font-weight: 600;
+    border-radius: inherit;
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   FEATURED CAROUSEL
+   - .carouselStage breaks out to the full viewport width (regardless of
+     the section's own padding) so cases can flow off both edges of the
+     page, with only ~half of the next/previous case visible, and is the
+     positioned ancestor that .featuredTextLeft / .featuredDescription
+     overlay against.
+   - Title/date/subtitle/description are absolutely positioned OVER the
+     carousel rather than sitting beside it.
+    ─────────────────────────────────────────────────────────────────────── */
+.featuredSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2.5vh, 30px);
+    height: 90vh;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.carouselStage {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.carouselTrack {
+    display: flex;
+    align-items: center;
+    gap: var(--case-gap);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* centers the active case in the viewport, leaving just enough room
+       on either side for the next/previous case to peek in */
+    padding-inline: calc(50vw - (var(--case-width) / 2));
+    scrollbar-width: none;
+}
+
+.carouselTrack::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselItem {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+    opacity: 0.4;
+    transform: scale(0.82);
+    filter: saturate(0.6);
+}
+
+.carouselItemActive {
+    opacity: 1;
+    transform: scale(1);
+    filter: saturate(1);
+}
+
+/* the jewel case itself — background image from your jewelcase.jpg,
+   with the actual project cover enlarged and inset in the middle */
+/* the pre-made "jewel case" icon image (photo + case artwork already
+   composited) shown for each featured project. Wrapped in a fixed-size
+   box so the image is forced to case-width regardless of its own
+   (much larger) native pixel dimensions. */
+.carouselCaseWrapper {
+    position: relative;
+    width: var(--case-width);
+    aspect-ratio: 1 / 1;
+}
+
+.carouselCaseImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* overlaid caption blocks — positioned relative to .carouselStage, so
+   they sit ON TOP of the carousel instead of pushing it sideways */
+.featuredTextLeft {
+    font-family: 'HelveticaNowDisplay', Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: max(4vw, calc(50vw - (var(--case-width) / 2) - 1rem));
+    transform: translate(-100%, -50%);
+    z-index: 3;
+    text-align: right;
+    pointer-events: none;
+}
+
+.featuredTextLeft h3 {
+    font-family: 'HelveticaNowDisplayBold', Helvetica, Arial, sans-serif;
+    margin: 0 0 4px 0;
+    text-decoration: underline;
+    color: black;
+    font-size: clamp(1rem, 0.6rem + 0.7vw, 1.4rem);
+}
+
+.featuredDate {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.featuredSubtitle {
+    margin: 4px 0 0 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.featuredDescription {
+    position: absolute;
+    top: 50%;
+    right: max(4vw, calc(50vw - (var(--case-width) / 2) - 1rem));
+    transform: translate(100%, -50%);
+    z-index: 3;
+    margin: 0;
+    color: black;
+    font-family: 'HelveticaNowDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: clamp(12px, 2rem + 0.4vw, 15px);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    max-width: 24ch;
+    pointer-events: none;
+    text-align: left;
+}
+
+.seeMoreButton {
+    padding: clamp(6px, 1.2vh, 12px) clamp(20px, 3vw, 42px);
+    border-radius: 999px;
+    border: 1.5px solid var(--text-muted);
+    background: #ffffff;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    font-size: clamp(0.8rem, 0.6rem + 0.5vw, 1.05rem);
+}
+
+.seeMoreButton:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+/* slide-over panel that covers the carousel when "see more" is clicked —
+   slides in from the right, .projectPage's overflow-x:hidden keeps the
+   transition from causing a horizontal scrollbar */
+.detailsPanel {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: clamp(24px, 5vw, 60px);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+.detailsPanelOpen {
+    transform: translateX(0);
+}
+
+.detailsBackButton {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 1.5px solid var(--text-muted);
+    background: #ffffff;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.detailsBackButton:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   ARCHIVE SECTION — sortable, left-aligned, fixed 3-column grid
+   ─────────────────────────────────────────────────────────────────────── */
+.archiveSection {
+    background-color: var(--archive-bg);
+    padding: clamp(20px, 7vh, 50px) clamp(40px, 20vw, 220px) clamp(40px, 10vh, 70px);
+}
+
+.archiveHeader {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-bottom: clamp(24px, 4vh, 50px);
+}
+
+.archiveTitle {
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin: 0;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.archiveHeaderSpacer {
+    width: 1px;
+}
+
+.sortWrapper {
+    position: relative;
+}
+
+.sortButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.sortMenu {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+    min-width: 160px;
+}
+
+.sortMenu button {
+    padding: 10px 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.sortMenu button:hover {
+    background: var(--archive-bg);
+}
+
+.sortMenuItemActive {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+
+.archiveGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 3vw, 44px);
+}
+
+.archiveCard {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: left;
+}
+
+.archiveCard:hover {
+    transform: translateY(-4px);
+}
+
+.archiveCover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.archiveCover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.archiveMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.archiveCardTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.archiveCardTitle {
+    margin: 0;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: clamp(12px, 0.6rem + 0.4vw, 15px);
+    text-align: left;
+}
+
+/* aligned to sit flush under the title text (dot width + row gap = 14px),
+   not under the decorative dot itself */
+.archiveCardSubtitle {
+    margin: 2px 0 0 0px;
+    color: var(--text-muted);
+    font-size: clamp(10px, 0.5rem + 0.3vw, 12px);
+    text-align: left;
+}
+
+.archiveCardDate {
+    margin: 4px 0 0 0px;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: clamp(10px, 0.5rem + 0.3vw, 12px);
+    text-align: left;
+}
+
+.favouriteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.favouriteButton svg {
+    width: 14px;
+    height: 14px;
+}
+
+.sortButton svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   PROJECT POPUP — skeleton, styling still to come
+    ─────────────────────────────────────────────────────────────────────── */
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.popupCard {
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    max-width: 720px;
+    width: 80%;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: clamp(20px, 4vw, 40px);
+}
+
+.popupClose {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
     color: white;
+}
+
+/* centered cover image — size unchanged, just centered in the card */
+.popupCover {
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: 0 auto 16px auto;
+}
+
+.popupCover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popupSubtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin: 0;
+    font-family: inherit;
+}
+
+.popupDate {
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 2px 0 12px 0;
+}
+
+.popupDescription {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0 0 14px 0;
+}
+
+/* ── inline image templates ───────────────────────────────────────────
+   Drop one of these between paragraphs in a project's `body` array
+   (see projectsData.js) to break the text with 1, 2, or 3 images.
+   Row height targets ~30% of the card (clamped for small screens);
+   each template keeps its own aspect ratio and crops (object-fit: cover)
+   if the natural aspect ratio would exceed that height. Images always
+   span the full content width — text breaks around them, never wraps. */
+.popupImageRow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.popupImageFigure {
+    margin: 0;
+    max-height: clamp(120px, 22vh, 240px);
+    overflow: hidden;
+}
+
+.popupImageFigure img,
+.popupImageFigure>div {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.popupImageCaption {
+    margin-top: 6px;
+    font-size: clamp(9px, 0.55rem + 0.2vw, 11px);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* 1 image — wide banner */
+.popupImageRowSingle .popupImageFigure {
+    width: 100%;
+    aspect-ratio: 19 / 6;
+}
+
+/* 2 images — landscape, side by side */
+.popupImageRowTwo .popupImageFigure {
+    width: calc(50% - 5px);
+    aspect-ratio: 4 / 3;
+}
+
+/* 3 images — side by side */
+.popupImageRowThree .popupImageFigure {
+    width: calc(33.333% - 7px);
+    aspect-ratio: 1 / 1;
+}
+
+/* ── named write-up sections (e.g. "Reflection") ───────────────────── */
+.popupSection {
+    margin-top: 20px;
+}
+
+.popupSectionHeading {
+    margin: 0 0 6px 0;
+    color: var(--text-dark);
+    font-size: clamp(13px, 0.7rem + 0.4vw, 16px);
+}
+
+/* ───────────────────────────────────────────────────────────────────────
+   CURRENTLY WORKING ON — dark player-widget section
+   ─────────────────────────────────────────────────────────────────────── */
+.favProjectSection {
+    position: relative;
+    display: grid;
+    /* first column = 40vw minus the section's own 6vw side padding, so the
+       player's left edge lands at ~40% of the full page width */
+    grid-template-columns: 34vw 1fr;
+    align-items: center;
+    justify-items: start;
+    gap: clamp(20px, 4vw, 60px);
+    padding: clamp(30px, 6vh, 70px) 6vw;
+    background-color: #a5aab0;
+    background-image: url('../assets/bckd2.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: left;
+}
+
+.currentlyIntro {
+    text-align: left;
+}
+
+.currentlyIntro h2 {
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.currentlySubheading {
+    margin: 0 0 8px 0;
+    color: var(--accent-color);
+}
+
+.currentlyIntro p {
+    margin: 0;
+    max-width: 40ch;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.playerWidget {
+    background: var(--currently-card);
+    border-radius: 26px;
+    margin: 5vh 0 5vh 5vw;
+    padding: 20px;
+    width: clamp(260px, 35vw, 500px);
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.playerScreen {
+    width: 100%;
+    aspect-ratio: 7 / 2;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: linear-gradient(180deg, var(--archive-bg), #ffffff);
+}
+
+.playerScreen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playerTitle {
+    margin: 0;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.playerSubtitle {
+    margin: 2px 0 12px 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: inherit;
+}
+
+.playerControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #ffffff;
+    margin-top: 12px;
+}
+
+.playPauseButton {
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--currently-bg);
+    cursor: pointer;
 }
