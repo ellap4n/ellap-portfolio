@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Header from './Header.jsx';
 import HomePage from './HomePage.jsx';
@@ -9,7 +10,7 @@ import Footer from './Footer.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>s
       <Header /> {/* Website Header! */}
       <main>
         <Routes>
@@ -20,6 +21,7 @@ function App() {
         </Routes>
       </main>
       <Footer /> {/* Website Footer! */}
+      <Analytics />
     </BrowserRouter >
   );
 }
