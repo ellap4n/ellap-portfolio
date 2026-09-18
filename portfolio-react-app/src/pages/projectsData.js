@@ -297,7 +297,7 @@ export const projects = [
             {
                 type: 'image',
                 images: [
-                    { src: warman1, caption: 'Testing the drivetrain' },
+                    { src: warman1, caption: 'Testing the drive train' },
                     { src: warman2, caption: 'Final build, ready to compete' },
                 ],
             },
@@ -342,6 +342,141 @@ export const projects = [
                 content:
                     "The lamp itself was sculpted using a hand-coil technique, which required a surprising amount of structural consideration to ensure that the piece would not collapse while drying, or in the kiln. The next step would be to test the LED light and wiring to ensure that it is safe for a home environment.",
             }
+        ],
+        featured: false,
+    },
+    {
+        id: 10,
+        title: "Sleepout Building Construction",
+        subtitle: "Personal Project",
+        date: "2019-2021",
+        category: "personal",
+        description:
+            "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion.",
+        cover: housecover,
+        mainimage: null,
+        body: [
+            {
+                type: 'text',
+                content:
+                    "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion. It was constructed underneath private build restrictions, and I was in charge of the planning, verifying, and resourcing materials for the construction.",
+            },
+            {
+                type: 'list',
+                items: [
+                    'This was a turning point in my life that directed me towards consideration of a engineering career. I enjoyed the process of designing, all the way to construction, discovering my passion for practical applicated work.',
+                    'All the construction was completed by hand, and I learnt, and am confident in the use of tools such as a bench/hand saws, drills, mains wiring, constructing piles for foundation and more.',
+                    'I also painted and furnished the sleepout, which was a great opportunity to learn about interior design and how to create a comfortable and functional space.',
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house2, caption: 'Window Frame Installation', height: '50vh' },
+                    { src: house3, caption: 'Painting the interior', height: '50vh' },
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house5, caption: 'My Dad and I in front of the sleepout deck steps in 2021!', height: '90vh' },
+                ],
+            },
+            {
+                type: 'text',
+                content: 'A extension of this was the design of our new kitchen in 2022. I drafted the plans using floorplanner and revit, and worked with the engineer to ensure the design was feasible given the existing structure. I also got to assist the builders in some fun odd jobs! I enjoyed learning to lay tiles, install cabinets and gutter connections, and more.'
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house1, caption: 'Demolishing Old Kitchen Walls', height: '50vh' },
+                    { src: house4, caption: 'Kitchen Design 3D Render', height: '50vh' },
+                ],
+            }
+        ],
+        featured: false,
+    },
+    {
+        id: 12,
+        title: "Clay Hand Sculpture",
+        subtitle: "Work for Exhibition",
+        date: "Jan - Feb 2026",
+        category: "personal",
+        description:
+            "This was a personal piece for an exhibition, where the clay is sculpted around an embedded wire armature. (See Final Art Piece in Gallery). I self-taught, through experimentation, how to use a wire armature as a structural, and form support for a clay sculpture.",
+        cover: armcover,
+        mainimage: null,
+        body: [
+            {
+                type: 'text',
+                content:
+                    "This was a personal piece for an exhibition, where the clay is sculpted around an embedded wire armature. (See Final Art Piece in Gallery). I self-taught, through experimentation, how to use a wire armature as a structural, and form support for a clay sculpture.",
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: arm1, caption: 'Wire Armature' },
+                    { src: arm2, caption: 'Foil Wrapping' },
+                    { src: arm3, caption: 'Adding Clay over the Armature' },
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: arm4, caption: 'Before Surface texturing', height: '50vh' },
+                    { src: arm5, caption: 'Working on the Forearm Section', height: '50vh' },
+                ],
+            },
+            {
+                type: 'list',
+                items: [
+                    'Anatomic studies were conducted to understand the underlying bone structure for armature, and muscle structure for the foil elements.',
+                    'Key learning was the use of materials for the correct job. This applies to both Art and Engineering - my sculpture started to crack, for which was able to be resolved artistically, but would have been a structural failure in an engineering application. This highlighted the importance of understanding the material properties, and how to use them effectively.',
+                    'I like to also mention that I used force and moment calculations to calibrate the maximum lean angle of the arm for it to be a self supporting structure. This was a bit more difficult than your average static application, as the volume mass of clay is not uniform, and constantly being added and removed, so the approximate angle to set the armature was first calculated to about 12 degrees.',
+                    'This was then adjusted once the clay had been sculpted. The challenge here was to make the structural support clay regions blend seamlessly with the lifelike form of the sculpture.',
+
+                ]
+            }
+        ],
+        featured: false,
+    },
+    {
+        id: 7,
+        title: "Amoeba Lighting Sculpture",
+        subtitle: "MAW Design",
+        date: "2022 - 2023",
+        category: "work",
+        featured_description: null,
+        description:
+            "Collaboration with ECC Lighting to design and build a lighting sculpture for display in Farmers Lane, Wellington.",
+        cover: amoeba,
+        body: [
+            {
+                type: 'text',
+                content:
+                    "Collaboration with ECC Lighting to design and build a lighting sculpture for display in Farmers Lane, Wellington. The aim was to create a visually striking and interactive piece that would engage the public and enhance the urban environment. The sculpture recieved an  award of commendation from IESANZ was awarded in 2024."
+            },
+            {
+                type: 'list',
+                items: [
+                    'I was responsible for the design and fabrication of the sculpture, which involved creating a 3D model of the sculpture, selecting appropriate materials, and assisting inthe construction process.',
+                    'I also worked closely with ECC Lighting to ensure that the lighting elements were integrated seamlessly into the sculpture, and that the final product met all safety and regulatory requirements such as public disturbance, electrical safety, and bird safety.',
+                    'This project was a excellent application of both aesthetic and functionality in design, and I learnt a lot about the importance of collaboration and communication in a multidisciplinary project. It also highlighted the importance of considering the end user experience, as this was the first time a design that I have worked on was displayed/interacted with by the public.'
+                ]
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: amoeba2, caption: 'Final design of the Amoeba Lighting Sculpture', height: '80vh' },
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: amoeba3, caption: 'Detail drawing section of a extrusion of the Light', height: '50vh' },
+                    { src: amoeba4, caption: 'Cable and connector details', height: '50vh' },
+                ],
+            },
         ],
         featured: false,
     },
@@ -415,57 +550,7 @@ export const projects = [
         ],
         featured: false,
     },
-    {
-        id: 10,
-        title: "Sleepout Building Construction",
-        subtitle: "Personal Project",
-        date: "2019-2021",
-        category: "personal",
-        description:
-            "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion.",
-        cover: housecover,
-        mainimage: null,
-        body: [
-            {
-                type: 'text',
-                content:
-                    "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion. It was constructed underneath private build restrictions, and I was in charge of the planning, verifying, and resourcing materials for the construction.",
-            },
-            {
-                type: 'list',
-                items: [
-                    'This was a turning point in my life that directed me towards consideration of a engineering career. I enjoyed the process of designing, all the way to construction, discovering my passion for practical applicated work.',
-                    'All the construction was completed by hand, and I learnt, and am confident in the use of tools such as a bench/hand saws, drills, mains wiring, constructing piles for foundation and more.',
-                    'I also painted and furnished the sleepout, which was a great opportunity to learn about interior design and how to create a comfortable and functional space.',
-                ],
-            },
-            {
-                type: 'image',
-                images: [
-                    { src: house2, caption: 'Window Frame Installation', height: '50vh' },
-                    { src: house3, caption: 'Painting the interior', height: '50vh' },
-                ],
-            },
-            {
-                type: 'image',
-                images: [
-                    { src: house5, caption: 'My Dad and I in front of the sleepout deck steps in 2021!', height: '90vh' },
-                ],
-            },
-            {
-                type: 'text',
-                content: 'A extension of this was the design of our new kitchen in 2022. I drafted the plans using floorplanner and revit, and worked with the engineer to ensure the design was feasible given the existing structure. I also got to assist the builders in some fun odd jobs! I enjoyed learning to lay tiles, install cabinets and gutter connections, and more.'
-            },
-            {
-                type: 'image',
-                images: [
-                    { src: house1, caption: 'Demolishing Old Kitchen Walls', height: '50vh' },
-                    { src: house4, caption: 'Kitchen Design 3D Render', height: '50vh' },
-                ],
-            }
-        ],
-        featured: false,
-    },
+
     {
         id: 9,
         title: "CAD Competition",
@@ -516,46 +601,7 @@ export const projects = [
     //     image3: null,
     //     featured: false,
     // },
-    {
-        id: 7,
-        title: "Amoeba Lighting Sculpture",
-        subtitle: "MAW Design",
-        date: "2022 - 2023",
-        category: "work",
-        featured_description: null,
-        description:
-            "Collaboration with ECC Lighting to design and build a lighting sculpture for display in Farmers Lane, Wellington.",
-        cover: amoeba,
-        body: [
-            {
-                type: 'text',
-                content:
-                    "Collaboration with ECC Lighting to design and build a lighting sculpture for display in Farmers Lane, Wellington. The aim was to create a visually striking and interactive piece that would engage the public and enhance the urban environment. The sculpture recieved an  award of commendation from IESANZ was awarded in 2024."
-            },
-            {
-                type: 'list',
-                items: [
-                    'I was responsible for the design and fabrication of the sculpture, which involved creating a 3D model of the sculpture, selecting appropriate materials, and assisting inthe construction process.',
-                    'I also worked closely with ECC Lighting to ensure that the lighting elements were integrated seamlessly into the sculpture, and that the final product met all safety and regulatory requirements such as public disturbance, electrical safety, and bird safety.',
-                    'This project was a excellent application of both aesthetic and functionality in design, and I learnt a lot about the importance of collaboration and communication in a multidisciplinary project. It also highlighted the importance of considering the end user experience, as this was the first time a design that I have worked on was displayed/interacted with by the public.'
-                ]
-            },
-            {
-                type: 'image',
-                images: [
-                    { src: amoeba2, caption: 'Final design of the Amoeba Lighting Sculpture', height: '80vh' },
-                ],
-            },
-            {
-                type: 'image',
-                images: [
-                    { src: amoeba3, caption: 'Detail drawing section of a extrusion of the Light', height: '50vh' },
-                    { src: amoeba4, caption: 'Cable and connector details', height: '50vh' },
-                ],
-            },
-        ],
-        featured: false,
-    },
+
 
 ];
 

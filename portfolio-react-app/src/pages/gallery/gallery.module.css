@@ -85,7 +85,7 @@
 }
 
 .expandedGallerySectionVisible {
-    max-height: clamp(300px, 45vw, 760px);
+    max-height: clamp(300px, 80vw, 1000px);
     opacity: 1;
     margin-bottom: 5vh;
 }
