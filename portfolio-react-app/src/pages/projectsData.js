@@ -69,6 +69,12 @@ import hearth3 from '../assets/projectphotos/hh3.png';
 import hearth4 from '../assets/projectphotos/hh4.png';
 import hearth5 from '../assets/projectphotos/hh5.png';
 import hearth6 from '../assets/projectphotos/hh6.jpg';
+import silicone from '../assets/projectphotos/siliconechamber.jpeg';
+import hhsketch from '../assets/projectphotos/hhsketch.png';
+import hhsketch2 from '../assets/projectphotos/hhsketch2.png';
+import hhinitial1 from '../assets/projectphotos/hhinitial1.png';
+import hhinitial2 from '../assets/projectphotos/hhinitial2.png';
+import hhinitial3 from '../assets/projectphotos/hhinitial3.png';
 
 import xy1 from '../assets/projectphotos/IMG_7841.jpg';
 import xy2 from '../assets/projectphotos/IMG_7840.jpg';
@@ -87,6 +93,26 @@ import cadcomp from '../assets/projectphotos/cadcomp.png';
 import cadcomp2 from '../assets/projectphotos/cadcomp2.png';
 import cadcomp3 from '../assets/projectphotos/cadcomp3.png';
 
+import housecover from '../assets/projectphotos/housecover.jpeg';
+import house1 from '../assets/projectphotos/house1.jpeg';
+import house2 from '../assets/projectphotos/house2.jpeg';
+import house3 from '../assets/projectphotos/house3.jpeg';
+import house4 from '../assets/projectphotos/house4.jpeg';
+import house5 from '../assets/projectphotos/house5.jpeg';
+
+import lampcover from '../assets/projectphotos/lampcover.jpeg';
+import lampwip1 from '../assets/projectphotos/lampwip1.jpeg';
+import lampwip2 from '../assets/projectphotos/lampwip2.jpeg';
+import lampwip3 from '../assets/projectphotos/lampwip3.jpeg';
+
+import armcover from '../assets/projectphotos/armcover.jpeg';
+import arm1 from '../assets/projectphotos/arm1.jpeg';
+import arm2 from '../assets/projectphotos/arm2.jpeg';
+import arm3 from '../assets/projectphotos/arm3.jpeg';
+import arm4 from '../assets/projectphotos/arm4.jpeg';
+import arm5 from '../assets/projectphotos/arm5.jpeg';
+
+
 // Category definitions — colours match your existing card.module.css values.
 // Change a colour here and it updates the legend, archive cards, everywhere.
 export const CATEGORIES = {
@@ -100,26 +126,26 @@ export const projects = [
         id: 5,
         title: "Heart Hackathon",
         subtitle: "Manawa Mechanics Team",
-        // TODO: fill in your actual date range for this one.
         date: "2026",
         category: "personal",
-        featured_description: "Design and Manufacturing a Total Artificial Heart prototype for UoA's first ever Heart Hackathon Team!",
+        featured_description: "Designing the chambers and outer casing of a Total Artificial Heart prototype as part of UoA's first Heart Hackathon.",
         description:
-            "An exciting opportunity to be a part of UoA's first ever Heart Hackathon Team!",
+            "Selected for UoA's first ever Heart Hackathon Team, designing and manufacturing a Total Artificial Heart (TAH) prototype.",
         cover: hearth,
         mainimage: hearth4,
         mainvideo: null,
         body: [
             {
                 type: 'text',
-                content: "I am part of the mechanical team, working to design the TAH's chambers, pumping actuator, and outer casing. \n My role in the team included:"
+                content: "As part of the mechanical team, I'm responsible for the TAH's blood chambers, pumping diaphragm, and outer casing to satisfy strict biocompatibility, hydraulic, and anatomical fit requirements. My contributions have been across concept and physical modelling through to CAD, manufacturing, and validation."
             },
             {
                 type: 'list', items: [
-                    'Ideation and design of the TAH chambers, review of the working heart model to create a effective geometry for the chambers. For this, I was inspired by the Vortexal pattern of shark intestines and natural human heart.',
-                    'I proposed a design for the pumping actuator, which is a diaphragm that will be actuated by a linear actuator to pump the blood through the chambers. I designed the diaphragm to be made of silicone, with a specific geometry to ensure effective pumping and durability.',
-                    'Modeling of the chambers with clay, before transferring it to a digital mesh, and CAD model using Autodesk Fusion 360. This was done in preparation for manufacturing, visualisation, and design validation through CFD simulations.',
-                    'The external casing of the TAH is my final design responsibility, which is currently being worked on. The aim of this is to provide compressive strength to the chambers, and enclose all internal components to provide a barrier to the body. ',
+                    'Led the ideation and geometry design of the blood chambers: I reviewed the working heart and existing TAH models, resulting in a ventricle-only relying on valves for one-way flow, then developed a vortex-inspired internal geometry drawing on flow patterns in shark intestines and the natural heart.',
+                    'Took the chamber from sculpted clay model to physical prototype: 3D-scanned and cleaned the sculpted mesh, then rebuilt it in Fusion 360 with a shelled wall and standardised inlet/outlet ports. A 3D-printed volume prototype validated the design against our 50-100 mL stroke-volume requirement, measuring 62 mL.',
+                    'Designed and iterated the pumping diaphragm through two geometries, moving from a cup profile (higher volume but prone to tearing under cyclic motion) to a concaved-cone profile for better self-alignment and reduced stress concentration.',
+                    'Identified the hard-to-soft chamber-diaphragm interface as the key failure risk, since clamping and bolting both introduced failure modes across a very tight bond area. Resolved it by redesigning the chamber as an enveloped soft membrane, structurally supported by an external rigid casing that removes the joint entirely.',
+                    'Currently leading the design of the external casing, which evolved from a purely structural motor/electronics enclosure into a load-bearing component after a moulding failure exposed the chamber glued seam as a weak point.',
                 ]
             },
             {
@@ -131,7 +157,19 @@ export const projects = [
             },
             {
                 type: 'text',
-                content: 'I also assisted in the manufacturing aspect of the TAH, which is done using silicone molding techniques. This was a team effort, and I was able to learn a lot about the process of silicone molding, and how to create effective molds for complex geometries.',
+                content: "After iterating from a simple bolted ring through a full bounding solid, the casing settled on a four-piece, modular housing. Key design decisions include:"
+            },
+            {
+                type: 'list', items: [
+                    'Rounded edges to reduce puncture risk against the adjacent lungs.',
+                    'A circular cross-section to distribute blunt-force impact more evenly than flat faces.',
+                    'Internal fasteners to keep bolts from being exposed.',
+                    'A modular top/bottom/central split to simplify surgical access without disturbing the chamberscompressive support.',
+                ]
+            },
+            {
+                type: 'text',
+                content: "Manufacturing has been an equally valuable part of this project, giving me hands-on experience with silicone injection molding for complex, hollow geometry. Early molds needed three to four pieces to capture the inlet/outlet pieces. This experience has sharpened my understanding of how material choice, tooling, and geometry trade off against each other in manufacturing practice.",
             },
             {
                 type: 'image',
@@ -144,7 +182,27 @@ export const projects = [
             {
                 type: 'image',
                 images: [
-                    { src: hearth5, caption: 'Mold Tool CAD', height: '80vh' },
+                    { src: hearth5, caption: 'Mold Tool CAD' },
+                    { src: silicone, caption: 'First Silicone Chamber Prototype' },
+                ],
+            },
+            {
+                type: 'text',
+                content: "This project has been my first real exposure to designing for the human body. I learnt alot about designing for patient needs, whether that's puncture risk against the lungs or how a surgeon would actually access the device. With the casing design still in progress, our next steps are finite element stress analysis on the chambers, physical durability testing, and testing with the Hemaloop team to properly validate the performance of the TAH.",
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: hhinitial1 },
+                    { src: hhinitial2, caption: 'Initial Working Sketches of the TAH' },
+                    { src: hhinitial3 },
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: hhsketch, caption: 'Further Sketches and Ideation' },
+                    { src: hhsketch2, caption: 'Initial Scotch Yoke Mechanism' },
                 ],
             }
         ],
@@ -202,6 +260,12 @@ export const projects = [
                     'Another key learning was how to actually implement control elements to achieve a precise and reliable system. This included understanding the limitations of the hardware, - such as motor power, component physical characteristics, and operational risks - and how to design the software to work within those limitations.',
                 ]
             },
+            {
+                type: 'image',
+                images: [
+                    { src: xy2, caption: 'Final XY Plotter Design', height: '80vh' },
+                ],
+            },
         ],
         featured: true,
     },
@@ -248,6 +312,38 @@ export const projects = [
             }
         ],
         featured: true,
+    },
+    {
+        id: 11,
+        title: "Ceramic Lamp",
+        subtitle: "FINEARTS 231",
+        date: "October 2025",
+        category: "uni",
+        description:
+            "I extended my Fine Arts Final Project (final piece in gallery page), soldering and wiring a LED light to make it a functional lamp. This was technically quite simple, but the difficulty lay in the consideration of the part to not affect functionality nor aesethetics of the piece. I also had to consider the safety of the lamp, and how to make it safe for use in a home environment.",
+        cover: lampcover,
+        mainimage: null,
+        body: [
+            {
+                type: 'text',
+                content:
+                    "I extended my Fine Arts Final Project (final piece in gallery page), soldering and wiring a LED light to make it a functional lamp. This was technically quite simple, but the difficulty lay in the consideration of the part to not affect functionality nor aesethetics of the piece. I also had to consider the safety of the lamp, and how to make it safe for use in a home environment.",
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: lampwip1, caption: 'Pre Fired' },
+                    { src: lampwip2, caption: 'Post Fired' },
+                    { src: lampwip3, caption: 'Hand Coiled Structure' },
+                ],
+            },
+            {
+                type: 'text',
+                content:
+                    "The lamp itself was sculpted using a hand-coil technique, which required a surprising amount of structural consideration to ensure that the piece would not collapse while drying, or in the kiln. The next step would be to test the LED light and wiring to ensure that it is safe for a home environment.",
+            }
+        ],
+        featured: false,
     },
     {
         id: 1,
@@ -314,6 +410,57 @@ export const projects = [
                     'This project was extremely beneficial to my practical manufacturing skillset. I learnt how to laser cut, 3D print, mill, weld, turn, and solder components to create a functional electromagnetic motor.',
                     'A big personal focus was on the actual techniques used in the project. As a Mechatronics Engineer, I need to be able to utilise these skills in my future work.',
                     'I also learnt how to wrap a electromagnetic coil. This was the most challenging practical task in the project, as it required a lot of patience and precision. Through this, I understood how the coil quality itself can actually significantly affect the performance of the motor.',
+                ],
+            }
+        ],
+        featured: false,
+    },
+    {
+        id: 10,
+        title: "Sleepout Building Construction",
+        subtitle: "Personal Project",
+        date: "2019-2021",
+        category: "personal",
+        description:
+            "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion.",
+        cover: housecover,
+        mainimage: null,
+        body: [
+            {
+                type: 'text',
+                content:
+                    "Built a sleepout in my backyard, from the ground up. This was a project completed with my dad, where we worked from design plans till completion. It was constructed underneath private build restrictions, and I was in charge of the planning, verifying, and resourcing materials for the construction.",
+            },
+            {
+                type: 'list',
+                items: [
+                    'This was a turning point in my life that directed me towards consideration of a engineering career. I enjoyed the process of designing, all the way to construction, discovering my passion for practical applicated work.',
+                    'All the construction was completed by hand, and I learnt, and am confident in the use of tools such as a bench/hand saws, drills, mains wiring, constructing piles for foundation and more.',
+                    'I also painted and furnished the sleepout, which was a great opportunity to learn about interior design and how to create a comfortable and functional space.',
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house2, caption: 'Window Frame Installation', height: '50vh' },
+                    { src: house3, caption: 'Painting the interior', height: '50vh' },
+                ],
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house5, caption: 'My Dad and I in front of the sleepout deck steps in 2021!', height: '90vh' },
+                ],
+            },
+            {
+                type: 'text',
+                content: 'A extension of this was the design of our new kitchen in 2022. I drafted the plans using floorplanner and revit, and worked with the engineer to ensure the design was feasible given the existing structure. I also got to assist the builders in some fun odd jobs! I enjoyed learning to lay tiles, install cabinets and gutter connections, and more.'
+            },
+            {
+                type: 'image',
+                images: [
+                    { src: house1, caption: 'Demolishing Old Kitchen Walls', height: '50vh' },
+                    { src: house4, caption: 'Kitchen Design 3D Render', height: '50vh' },
                 ],
             }
         ],
