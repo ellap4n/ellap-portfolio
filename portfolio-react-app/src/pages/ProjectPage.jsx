@@ -32,8 +32,8 @@ function ProjectPage() {
             <ProjectTitle />
             {/* <FeaturedCarousel /> */}
             <ArchiveSection />
-            {/* <CurrentlyPlaying />
-            {id !== undefined && <ProjectPopup projectId={id} />} */}
+            {/* <CurrentlyPlaying /> */}
+            {id !== undefined && <ProjectPopup projectId={id} />}
         </div>
     );
 }
