@@ -17,7 +17,7 @@ function GalleryPage() {
             <GalleryCarousel />
             <ArtAboutMe />
             <InstagramFeed />
-            <Commission />
+            {/* Commission */}
         </div>
     );
 }

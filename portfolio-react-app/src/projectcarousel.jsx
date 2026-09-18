@@ -11,20 +11,23 @@ function ProjectCarousel() {
         <div className={styles.projectPreviewSection}>
             <h2 style={{ color: '#ffffff' }}> {'<'} PROJECTS {'>'}</h2>
             <div className={styles.carouselContainer}>
-                <Link to='/projects/4'>
+                {/* <Link to='/projects/1'>
                     <Card title="Portfolio Website Build" description={<p>Building this Website! <br />Using React and CSS.</p>} variant="previewCard" />
+                </Link> */}
+                <Link to='/projects/5'>
+                    <Card title="TAH Mechanical Design" description={<p>Heart Hackathon Competition</p>} variant="previewCard" />
                 </Link>
                 <Link to='/projects/3'>
-                    <Card title="Mini-Warman Challenge" description={<p>Mechatronics Design project <br />UOA MECHENG235</p>} variant="previewCard" />
+                    <Card title="Mini-Warman Challenge" description={<p> Design and Build Challenge<br />UOA MECHENG235</p>} variant="previewCard" />
                 </Link>
                 <Link to='/projects/2'>
-                    <Card title="2D Pen Plotter" description={<p>Mechatronics Design project MECHENG306 <br />UOA MECHENG235</p>} variant="previewCard" />
+                    <Card title="2D Pen Plotter" description={<p>Mechatronics Systems Design project<br />UOA MECHENG306</p>} variant="previewCard" />
                 </Link>
-                <Link to='/projects/1'>
-                    <Card title="MDC Trophy Design" description={<p>Digital Sculpting and CAD <br /> Blender + TinkerCAD</p>} variant="previewCard" />
+                <Link to='/projects/7'>
+                    <Card title="Amoeba" description={<p>Design and manufactureing of a Lighting Sculpture </p>} variant="previewCard" />
                 </Link>
-                <Link to='/projects/0'>
-                    <Card title="C 'Boxed in' Game" description={<p>C++ Game Development <br /> UOA ENGGEN131</p>} variant="previewCard" />
+                <Link to='/projects/6'>
+                    <Card title="Electromagnetic Motor" description={<p>Building an Electromagnetic Motor<br />UOA MECHTRON299</p>} variant="previewCard" />
                 </Link>
             </div>
             <p style={{ textAlign: 'right' }} className={styles.imageDescriptionText}>Image taken in Tokyo, Japan (東京, 日本), Dec 2024. Mju Olympus I, Fujifilm 200.</p>

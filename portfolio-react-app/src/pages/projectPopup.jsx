@@ -21,7 +21,12 @@ function ImageRow({ images }) {
         <div className={`${styles.popupImageRow} ${rowClass}`}>
             {images.map((img, i) => (
                 <figure key={i} className={styles.popupImageFigure}>
-                    {img.src ? <img src={img.src} alt={img.caption || ''} /> : <PlaceholderCover />}
+                    <div
+                        className={styles.popupImageMedia}
+                        style={img.height ? { maxHeight: img.height } : undefined}
+                    >
+                        {img.src ? <img src={img.src} alt={img.caption || ''} /> : <PlaceholderCover />}
+                    </div>
                     {img.caption && <figcaption className={styles.popupImageCaption}>{img.caption}</figcaption>}
                 </figure>
             ))}
@@ -63,9 +68,9 @@ function ProjectPopup({ projectId }) {
                 <p className={styles.popupSubtitle}>{project.subtitle}</p>
                 <p className={styles.popupDate}>{project.date}</p>
 
-                {/* main body: an ordered mix of text and inline image rows,
-                    written out in projectsData.js — break up text with an
-                    image row wherever you like */}
+                {/* main body: an ordered mix of text, inline image rows, and
+                    videos, written out in projectsData.js — arrange blocks
+                    in whatever order tells the project's story best */}
                 {project.body?.map((block, i) => {
                     if (block.type === 'text') {
                         return (
@@ -76,6 +81,25 @@ function ProjectPopup({ projectId }) {
                     }
                     if (block.type === 'image') {
                         return <ImageRow key={i} images={block.images} />;
+                    }
+                    if (block.type === 'video') {
+                        return (
+                            <video
+                                key={i}
+                                src={block.src}
+                                controls
+                                className={styles.popupVideo}
+                            />
+                        );
+                    }
+                    if (block.type === 'list') {
+                        return (
+                            <ul key={i} className={styles.popupList}>
+                                {block.items.map((item, j) => (
+                                    <li key={j}>{item}</li>
+                                ))}
+                            </ul>
+                        );
                     }
                     return null;
                 })}

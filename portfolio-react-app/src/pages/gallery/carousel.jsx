@@ -10,6 +10,11 @@ import lamp from '../../assets/galleryphotos/lamp.JPG';
 import lamp1 from '../../assets/galleryphotos/lamp1.JPG';
 import lamp2 from '../../assets/galleryphotos/lamp2.JPG';
 import hand from '../../assets/galleryphotos/hand.JPG';
+import hand1 from '../../assets/galleryphotos/hand1.jpeg';
+import hand2 from '../../assets/galleryphotos/hand2.jpeg';
+import hand3 from '../../assets/galleryphotos/hand3.jpeg';
+import hand4 from '../../assets/galleryphotos/hand4.jpeg';
+import hand5 from '../../assets/galleryphotos/hand5.jpeg';
 import motion1 from '../../assets/galleryphotos/motion1.jpg';
 import motion2 from '../../assets/galleryphotos/motion2.jpg';
 import motion3 from '../../assets/galleryphotos/motion3.jpg';
@@ -17,7 +22,17 @@ import motion4 from '../../assets/galleryphotos/motion4.jpg';
 import motion5 from '../../assets/galleryphotos/motion5.jpg';
 import motion6 from '../../assets/galleryphotos/motion6.jpg';
 import sun from '../../assets/sun.JPG';
+import tw2 from '../../assets/galleryphotos/tw2.jpeg';
+import tw3 from '../../assets/galleryphotos/tw3.jpeg';
+import tw4 from '../../assets/galleryphotos/tw4.jpeg';
+import tw5 from '../../assets/galleryphotos/tw5.jpeg';
 import fmmart from '../../assets/fmmart.JPG';
+import jp2 from '../../assets/galleryphotos/jp2.jpeg';
+import jp3 from '../../assets/galleryphotos/jp3.jpeg';
+import jp4 from '../../assets/galleryphotos/jp4.jpeg';
+import jp5 from '../../assets/galleryphotos/jp5.jpeg';
+import jp6 from '../../assets/galleryphotos/jp6.jpeg';
+import jp7 from '../../assets/galleryphotos/jp7.jpeg';
 import maandba from '../../assets/galleryphotos/momanddad.jpg';
 import { useState, useRef, useEffect } from 'react';
 
@@ -28,8 +43,8 @@ const GALLERY_ITEMS = [
         title: 'the people we meet, even in passing',
         medium: 'Air Dry Clay, Textiles, Sewing Thread',
         artdate: 'February 2026',
-        artdescription: 'thank you to the lady at the corner who taught me kindness',
-        extraPhotos: [hand],
+        artdescription: 'thank you to the lady at the corner who taught me kindness \n Hand sculpted using armature wires, clay, and thread. This piece is a tribute to everyone who I have ever encountered, playing with the idea that all meetings, even brief, are "fated".',
+        extraPhotos: [hand, hand1, hand2, hand3, hand4, hand5],
     },
     {
         img: hema1,
@@ -65,16 +80,16 @@ const GALLERY_ITEMS = [
         medium: 'Analogue Photography',
         artdate: 'January 2025',
         artdescription: 'Taiwan from my perspective',
-        extraPhotos: [sun],
+        extraPhotos: [sun, tw2, tw3, tw4, tw5],
     },
     {
         img: fmmart,
-        alt: 'Memos from Shikoku',
-        title: 'Memos from Shikoku',
+        alt: 'Memos from Shikoku and Sapporo',
+        title: 'Memos from Shikoku and Sapporo',
         medium: 'Analogue Photography',
         artdate: 'January 2025',
         artdescription: 'Japan, away from the metropolis',
-        extraPhotos: [fmmart],
+        extraPhotos: [fmmart, jp2, jp3, jp4, jp5, jp6],
     },
     {
         img: motion5,

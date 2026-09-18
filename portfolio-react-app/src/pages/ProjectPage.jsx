@@ -30,10 +30,10 @@ function ProjectPage() {
     return (
         <div className={styles.projectPage}>
             <ProjectTitle />
-            <FeaturedCarousel />
+            {/* <FeaturedCarousel /> */}
             <ArchiveSection />
-            <CurrentlyPlaying />
-            {id !== undefined && <ProjectPopup projectId={id} />}
+            {/* <CurrentlyPlaying />
+            {id !== undefined && <ProjectPopup projectId={id} />} */}
         </div>
     );
 }

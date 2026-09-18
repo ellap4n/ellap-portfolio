@@ -17,9 +17,6 @@ function ContactMe() {
                     <a href="https://www.linkedin.com/in/ella-pan-19a66b298/" target="_blank" rel="noopener noreferrer">
                         <img src={linkedinIcon} alt="LinkedIn" className={styles.contactMeIcon} />
                     </a>
-                    <a href="https://github.com/ella-pan" target="_blank" rel="noopener noreferrer">
-                        <img src={githubIcon} alt="GitHub" className={styles.contactMeIcon} />
-                    </a>
                 </div>
             </div>
             <img src={contactImg} alt="Contact Me" className={styles.contactMeImg} />
